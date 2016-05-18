@@ -14,3 +14,4 @@ while( $record = mysql_fetch_assoc( $result ) )
   echo '</pre>';
   
 }
+

@@ -10,7 +10,8 @@ while( $record = mysql_fetch_assoc( $result ) )
 {
   
   echo '<pre>';
-  print_r( $record );
+   print_r( $record );
+  //echo $record['name'];
   echo '</pre>';
   
 }

@@ -1,14 +1,5 @@
 <?php
 
-<<<<<<< HEAD
-echo 'gfdsgfdaa';
-
-
-?>
-<h1>
-  My test
-</h1>
-=======
 include( 'bootstrap.php' );
 
 $query = 'SELECT *
@@ -23,4 +14,3 @@ while( $record = mysql_fetch_assoc( $result ) )
   echo '</pre>';
   
 }
->>>>>>> 3045b85beed5b5c8f8e097f8937dceab51a20948

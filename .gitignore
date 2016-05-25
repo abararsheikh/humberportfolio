@@ -39,5 +39,6 @@ Thumbs.db
 # Config File #
 ######################
 config.php
+vandor/
 
 .idea/

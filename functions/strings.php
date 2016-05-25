@@ -10,7 +10,7 @@ function random_string( $length = 8 )
   for( $i = 0; $i < $length; $i++ )
   {
     
-    $random_string .= $characters[rand( 0, strlen( $characters ) )];
+    $random_string .= $characters[rand( 0, strlen( $characters ) - 1 )];
   
   }
   

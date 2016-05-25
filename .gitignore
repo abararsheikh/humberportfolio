@@ -39,6 +39,6 @@ Thumbs.db
 # Config File #
 ######################
 config.php
-vandor/
+vendor/
 
 .idea/

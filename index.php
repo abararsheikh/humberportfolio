@@ -6,7 +6,7 @@ include( 'bootstrap.php' );
 
 <html>
   <head>
-    <title>Humber Portfolio...</title>
+    <title>Humber Portfolio App</title>
   </head>
   <body>
     

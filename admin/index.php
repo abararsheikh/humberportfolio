@@ -1,17 +1,17 @@
 <?php
 
-include( 'bootstrap.php' );
+include( '../bootstrap.php' );
 
 ?>
 
 <html>
   <head>
-    <title>Humber Portfolio...</title>
+    <title>Humber Portfolio Admin...</title>
   </head>
   <body>
     
     <h1>
-      Welcome to Portfolio Tool
+      Welcome to Portfolio Tool Admin
     </h1>
     
     <p>

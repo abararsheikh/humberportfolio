@@ -18,5 +18,9 @@ include( 'bootstrap.php' );
       <?php echo random_string(); ?>
     </p>
     
+    <p>
+      Footer | Copyright 2016
+    </p>
+    
   </body>
 </html>

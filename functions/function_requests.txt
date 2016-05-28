@@ -1,0 +1,14 @@
+*** SHARED FUNCTIONS BACKLOG ***
+All requests for new shared functions should be placed in this file. Please place requests under the 'NEW FUNCTION REQUESTS' heading, along with the date of the request, a description, and your name.
+
+NOTE: Your function will be built from the description you provide, so please be precise.
+
+Example:
+
+Function Name: student_email_login
+Request Date: May 25
+Requester: John Doe
+Description: This function will allow students to login using their email and password. This function should accept email and password as parameters, and return a value of true/false depending on if the login was successful.
+
+
+*** NEW FUNCTION REQUESTS ***

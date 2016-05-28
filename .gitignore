@@ -42,3 +42,4 @@ config.php
 vendor/
 
 .idea/
+tests/_output/*

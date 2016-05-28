@@ -6,7 +6,7 @@ include( 'bootstrap.php' );
 
 <html>
   <head>
-    <title>Humber Portfolio...</title>
+    <title>Humber Portfolio App</title>
   </head>
   <body>
     
@@ -16,6 +16,10 @@ include( 'bootstrap.php' );
     
     <p>
       <?php echo random_string(); ?>
+    </p>
+    
+    <p>
+      Footer | Copyright 2016
     </p>
     
   </body>

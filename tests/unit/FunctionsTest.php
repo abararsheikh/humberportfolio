@@ -1,6 +1,5 @@
 <?php
 
-
 class FunctionsTest extends \Codeception\TestCase\Test
 {
     use \Codeception\Specify;
@@ -9,38 +8,32 @@ class FunctionsTest extends \Codeception\TestCase\Test
       // run it 30 times to have some randomness
       for ($i = 0; $i < 30; $i++)
       {
-        $this->testRandom_string();
+        $this->test_random_string();
       }
     }
 
   // test for random_string function in functions/strings.php
-    public function testRandom_string()
+    public function test_random_string()
     {
         $this->specify('default password length should be 8', function()
         {
-          $this->assertEquals(8, strlen(random_string()));
+          expect( strlen(random_string()) )->equals(8);
         });
 
-        $this->specify('password length should be 10', function()
+        $this->specify('password length is the same as value passed in', function()
         {
-          $this->assertEquals(10, strlen(random_string(10)));
+          expect( strlen(random_string(10)) )->equals(10);
         });
 
         $this->specify('type of returned password should be string', function()
         {
-          $this->assertTrue(is_string(random_string()));
+          expect( is_string(random_string()) )->true();
         });
 
         $this->specify('there should be no special characters in password', function()
         {
           $specialChars = '/[!@#$%^&*()]/';
-          $this->assertFalse(preg_match($specialChars, random_string()) == 1);
+          expect( preg_match($specialChars, random_string()) )->equals(0);
         });
-
-//        // this should fail the test.
-//        $this->specify('type of password should not be number', function()
-//       {
-//          $this->assertTrue(is_numeric(random_string()));
-//        });
     }
 }

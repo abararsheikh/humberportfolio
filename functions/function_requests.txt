@@ -12,3 +12,11 @@ Description: This function will allow students to login using their email and pa
 
 
 *** NEW FUNCTION REQUESTS ***
+
+(edit this as needed and please feel free to contact me for clarification)
+Function Name: send_password ( $email )
+Request Date: May 29
+Requester: Jordan Carter
+Description: This function retrieves the password in the database associated with an e-mail address, passed from an input field, and sends it through e-mail to that address. This is for the forgot password pages on the front end and admin sides. If this is demanding too much, then perhaps just a general mail function will do.
+
+

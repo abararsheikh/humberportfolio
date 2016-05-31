@@ -1,14 +1,20 @@
 -- phpMyAdmin SQL Dump
--- version 4.4.13.1deb1
+-- version 4.1.14
 -- http://www.phpmyadmin.net
 --
--- Host: localhost
--- Generation Time: May 25, 2016 at 03:21 PM
--- Server version: 5.6.30-0ubuntu0.15.10.1
--- PHP Version: 5.6.11-1ubuntu3.4
+-- Host: 127.0.0.1
+-- Generation Time: May 31, 2016 at 03:55 AM
+-- Server version: 5.6.17
+-- PHP Version: 5.5.12
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 SET time_zone = "+00:00";
+
+
+/*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
+/*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
+/*!40101 SET @OLD_COLLATION_CONNECTION=@@COLLATION_CONNECTION */;
+/*!40101 SET NAMES utf8 */;
 
 --
 -- Database: `humberportfolio`
@@ -21,15 +27,16 @@ SET time_zone = "+00:00";
 --
 
 CREATE TABLE IF NOT EXISTS `administrators` (
-  `id` smallint(5) unsigned NOT NULL,
+  `a_id` smallint(5) unsigned NOT NULL AUTO_INCREMENT,
   `first` varchar(25) NOT NULL,
   `last` varchar(25) NOT NULL,
   `email` varchar(100) NOT NULL,
   `password` varchar(100) NOT NULL,
   `created_at` datetime NOT NULL,
   `updated_at` datetime NOT NULL,
-  `deleted_at` datetime NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+  `deleted_at` datetime NOT NULL,
+  PRIMARY KEY (`a_id`)
+) ENGINE=InnoDB DEFAULT CHARSET=latin1 AUTO_INCREMENT=1 ;
 
 -- --------------------------------------------------------
 
@@ -38,13 +45,38 @@ CREATE TABLE IF NOT EXISTS `administrators` (
 --
 
 CREATE TABLE IF NOT EXISTS `classes` (
-  `id` int(10) unsigned NOT NULL,
-  `name` varchar(100) NOT NULL,
-  `from` date NOT NULL,
-  `to` date NOT NULL,
+  `c_id` int(10) unsigned NOT NULL AUTO_INCREMENT,
+  `c_name` varchar(100) NOT NULL,
+  `c_from` date NOT NULL,
+  `c_to` date NOT NULL,
   `created_at` datetime NOT NULL,
   `updated_at` datetime NOT NULL,
-  `deleted_at` datetime NOT NULL
+  `deleted_at` datetime NOT NULL,
+  PRIMARY KEY (`c_id`)
+) ENGINE=InnoDB DEFAULT CHARSET=latin1 AUTO_INCREMENT=1 ;
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `images`
+--
+
+CREATE TABLE IF NOT EXISTS `images` (
+  `i_id` int(11) NOT NULL AUTO_INCREMENT,
+  `filename` text NOT NULL,
+  `alt` text NOT NULL,
+  PRIMARY KEY (`i_id`)
+) ENGINE=InnoDB DEFAULT CHARSET=latin1 AUTO_INCREMENT=1 ;
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `projects`
+--
+
+CREATE TABLE IF NOT EXISTS `projects` (
+  `p_id` int(11) NOT NULL,
+  PRIMARY KEY (`p_id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 -- --------------------------------------------------------
@@ -54,7 +86,7 @@ CREATE TABLE IF NOT EXISTS `classes` (
 --
 
 CREATE TABLE IF NOT EXISTS `students` (
-  `id` int(10) unsigned NOT NULL,
+  `id` int(10) unsigned NOT NULL AUTO_INCREMENT,
   `first` varchar(25) NOT NULL,
   `last` varchar(25) NOT NULL,
   `email` varchar(100) NOT NULL,
@@ -62,47 +94,10 @@ CREATE TABLE IF NOT EXISTS `students` (
   `classes_id` int(10) unsigned NOT NULL,
   `created_at` datetime NOT NULL,
   `updated_at` datetime NOT NULL,
-  `deleted_at` datetime NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+  `deleted_at` datetime NOT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB DEFAULT CHARSET=latin1 AUTO_INCREMENT=1 ;
 
---
--- Indexes for dumped tables
---
-
---
--- Indexes for table `administrators`
---
-ALTER TABLE `administrators`
-  ADD PRIMARY KEY (`id`);
-
---
--- Indexes for table `classes`
---
-ALTER TABLE `classes`
-  ADD PRIMARY KEY (`id`);
-
---
--- Indexes for table `students`
---
-ALTER TABLE `students`
-  ADD PRIMARY KEY (`id`);
-
---
--- AUTO_INCREMENT for dumped tables
---
-
---
--- AUTO_INCREMENT for table `administrators`
---
-ALTER TABLE `administrators`
-  MODIFY `id` smallint(5) unsigned NOT NULL AUTO_INCREMENT;
---
--- AUTO_INCREMENT for table `classes`
---
-ALTER TABLE `classes`
-  MODIFY `id` int(10) unsigned NOT NULL AUTO_INCREMENT;
---
--- AUTO_INCREMENT for table `students`
---
-ALTER TABLE `students`
-  MODIFY `id` int(10) unsigned NOT NULL AUTO_INCREMENT;
+/*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
+/*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
+/*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;

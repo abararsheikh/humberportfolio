@@ -11,9 +11,7 @@ Requester: John Doe
 Description: This function will allow students to login using their email and password. This function should accept email and password as parameters, and return a value of true/false depending on if the login was successful.
 
 
-*** NEW FUNCTION REQUESTS ***
-
-** FUNCTION REQUESTS IN PROGRESS **
+*** FUNCTION REQUESTS ***
 
 (edit this as needed and please feel free to contact me for clarification)
 Function Name: send_password ( $email )
@@ -21,4 +19,30 @@ Request Date: May 29
 Requester: Jordan Carter
 Description: This function retrieves the password in the database associated with an e-mail address, passed from an input field, and sends it through e-mail to that address. This is for the forgot password pages on the front end and admin sides. If this is demanding too much, then perhaps just a general mail function will do.
 Notes: Split in to two functions
-Programmer: Jon, Zarna
+Programmer Incharge: Jon, Zarna
+
+
+Function Name :Validation Form
+Request Date: June 1
+Requester: Ran
+Description: We need function for form validation. email, password(at least one uppercase charaters and min 5 charaters), comfirm password, first name(not empty) and last name(not empty).
+Programmer Incharge: Alya, Zarna, Lena, Akshi, Jonathan
+
+Function Name :Encryption Password
+Request Date: June 1
+Requester: Ran
+Description: Input is password and return an encrypted password.
+Programmer Incharge - Alya
+
+
+Function Name :Email Sender
+Request Date: June 1
+Requester: Aysen
+Description: input is email address and content, send an email to that email address which has the cntent.
+Programmer Incharge - Zarna
+
+Function Name :Email Validation
+Request Date: June 1
+Requester: Ran
+Description: Input is password and return an encrypted password.
+Programmer Incharge - Akshi

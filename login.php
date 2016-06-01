@@ -8,9 +8,14 @@ echo "Hello" ."<br/>";
       $email = $_POST['email'];
       $password = $_POST['password'];
       //connect to databse  
-      echo $email ."<br/>";
-      echo $password;
-      $row = $query->exec("select id,email,password from users where email = $email");
+      $db = Database::getDB();
+      $query='SELECT id,email,password from students where email = $email';
+      $result= $db->prepare($query);
+      $result->execute();
+      $row = $result->fetch();
+      $result->closeCursor();
+     // echo $email ."<br/>";
+     // echo $password;      
       //If the user record was found, compare the password on record to the one provided hashed as necessary.
 
       if($row !== false)

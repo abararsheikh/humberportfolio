@@ -39,5 +39,8 @@ Thumbs.db
 # Config File #
 ######################
 config.php
+vendor/
 
 .idea/
+tests/_output/*
+node_modules/

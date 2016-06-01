@@ -19,7 +19,10 @@ class Database
     public static $password = MYSQL_PASSWORD;
 
     private static $db;
-
+    public static function getDSN()
+    {
+      return self::$dsn;
+    }
     public static function getDB()
     {
         if(!isset(self::$db))
@@ -38,4 +41,9 @@ class Database
         return self::$db;
     }
 }
+
+$something = Database::getDB();
+var_dump($something);
+$result = $something->query('SELECT * FROM administrators');
+var_dump($result->fetchAll());
 

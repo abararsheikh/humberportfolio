@@ -1,6 +1,7 @@
 <?php
 
 include( 'bootstrap.php' );
+include "login.php";
 
 ?>
 
@@ -13,7 +14,31 @@ include( 'bootstrap.php' );
     <h1>
       Welcome to Portfolio Tool
     </h1>
-    
+    <form method="post" action="">
+        <?php
+
+            if(isset($error))
+            {
+                echo $error;
+            }
+
+       ?>
+
+        <div>
+            <label for="email">Email:</label>
+            <input type="text" name="email" placeholder="Email Address" maxlength="100">
+        </div>
+
+        <div class="form-row">
+            <label for="password">Password:</label>
+            <input type="password" name="password" placeholder="Password" maxlength="100">
+        </div>
+      
+        <div class="login-button">
+            <input type="submit" name="submit" value="Login" title="Login now">
+        </div>
+
+    </form>
     <p>
       <?php echo random_string(); ?>
     </p>

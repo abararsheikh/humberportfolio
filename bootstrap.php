@@ -42,8 +42,8 @@ class Database
     }
 }
 
-$something = Database::getDB();
-var_dump($something);
-$result = $something->query('SELECT * FROM administrators');
-var_dump($result->fetchAll());
+//$something = Database::getDB();
+//var_dump($something);
+//$result = $something->query('SELECT * FROM administrators');
+//var_dump($result->fetchAll());
 

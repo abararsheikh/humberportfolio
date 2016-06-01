@@ -14,13 +14,7 @@ include "./frontend/login.php";
     <h1>
       Welcome to Portfolio Tool
     </h1>
-    <form method="post" action="">
-        <?php
-            if(isset($error))
-            {
-                echo $error;
-            }
-       ?>
+    <form method="post" action="">   
 
         <div>
             <label for="email">Email:</label>
@@ -33,6 +27,12 @@ include "./frontend/login.php";
         <div class="login-button">
             <input type="submit" name="submit" value="Login" title="Login now">
         </div>
+         <?php
+            if(isset($error))
+            {
+                echo $error;
+            }
+       ?>
 
     </form>
     <p>

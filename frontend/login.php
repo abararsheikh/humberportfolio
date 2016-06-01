@@ -1,9 +1,8 @@
 <?php
-//include( 'bootstrap.php' ); //This file is incuded to start the session 
-session_start();//session starts here  
+include('../bootstrap.php' ); //This file is incuded to start the session 
+//session_start();//session starts here  
 if(isset($_POST['submit']))
 {  
-//echo "Hello" ."<br/>";
     if (isset($_POST['email']) && isset($_POST['password'])) 
     {
       $email = $_POST['email'];
@@ -16,9 +15,8 @@ if(isset($_POST['submit']))
       $result->execute();
       $row = $result->fetch();      
       $result->closeCursor();
-      var_dump($row);
-     // echo $email ."<br/>";
-     // echo $password;      
+      //var_dump($row);
+         
       //If the user record was found, compare the password on record to the one provided hashed as necessary.
 
       if($row !== false)
@@ -30,9 +28,9 @@ if(isset($_POST['submit']))
           $_SESSION['student_id'] = $row['id'];
           //$_SESSION['name'] = $row['name'];
           // Once the sessions variables have been set, redirect them to the landing page / home page.
-         // header('location: index.php');
-        echo "loggedin";
-         // exit;                    
+          header('location:frontend/student-profile.php');
+        
+          exit;                    
 
     //    }
         //else

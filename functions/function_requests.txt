@@ -30,3 +30,23 @@ Description: The function needs to check the login and password and check the ro
 then return true. Another function checkes the role and returns the role of the user.
 Note: split in 2 functions
 Programmer: Alya, Akshi
+
+
+Function Name :Validation Form
+Request Date: June 1
+Requester: Ran
+Description: We need function for form validation. email, password(at least one uppercase charaters and min 5 charaters), comfirm password, first name(not empty) and last name(not empty).
+Programmer: Ran Wang
+
+Function Name :Encryption Password
+Request Date: June 1
+Requester: Ran
+Description: Input is password and return an encrypted password.
+Programmer: Ran Wang
+
+
+Function Name :Email Sender
+Request Date: June 1
+Requester: Aysen
+Description: input is email address and content, send an email to that email address which has the cntent.
+Programmer: Aysen

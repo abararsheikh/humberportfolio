@@ -23,7 +23,6 @@
 # Logs and databases #
 ######################
 *.log
-*.sql
 *.sqlite
 
 # OS generated files #
@@ -39,4 +38,8 @@ Thumbs.db
 # Config File #
 ######################
 config.php
+vendor/
 
+.idea/
+tests/_output/*
+node_modules/

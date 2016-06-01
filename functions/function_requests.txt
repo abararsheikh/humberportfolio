@@ -22,3 +22,11 @@ Requester: Jordan Carter
 Description: This function retrieves the password in the database associated with an e-mail address, passed from an input field, and sends it through e-mail to that address. This is for the forgot password pages on the front end and admin sides. If this is demanding too much, then perhaps just a general mail function will do.
 Notes: Split in to two functions
 Programmer: Jon, Zarna
+
+Function Name :login and check role
+Request Date: June 1
+Requester: Gord
+Description: The function needs to check the login and password and check the role of the user, the user inputs username and password, one function checks the authentication if the username and password are valid and 
+then return true. Another function checkes the role and returns the role of the user.
+Note: split in 2 functions
+Programmer: Alya, Akshi

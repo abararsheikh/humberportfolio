@@ -1,8 +1,8 @@
 <?php
 function ps_validate($password){
 try{
-   if(strlen($password)<5){
-    throw new Exception("Password should be at least 5 characters!");
+   if(strlen($password)<8){
+    throw new Exception("Password should be at least 8 characters!");
      
    }else if(!preg_match('/[A-Z]+/',$password)){
       throw new Exception("Password should be at least one uppercase character!");

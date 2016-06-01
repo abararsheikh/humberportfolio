@@ -1,0 +1,2 @@
+*** SHARED FUNCTION DOCUMENTATION/IMPLEMENTATION ***
+Here, you will find information on what functions have been created and how to use them.

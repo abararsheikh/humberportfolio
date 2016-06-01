@@ -4,13 +4,13 @@
 function random_string( $length = 8 )
 {
   
-  $characters = '0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ';
+  $characters = '0123456789abcdefghijkBClmnopqrstuvwxyzADEFGHIJKLMNOPQRSTUVWXYZ';
   $random_string = '';
   
   for( $i = 0; $i < $length; $i++ )
   {
     
-    $random_string .= $characters[rand( 0, strlen( $characters ) )];
+    $random_string .= $characters[rand( 0, strlen( $characters ) - 1 )];
   
   }
   

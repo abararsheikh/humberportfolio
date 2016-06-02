@@ -1,7 +1,15 @@
 <?php
+
 session_start();
 
-/* Session user information structure
+//Global Root Dir: /var/www/portfolio
+define( 'DIR_BASE', __DIR__ . '/' );
+
+//Include composer library
+include DIR_BASE . 'vendor/autoload.php';
+
+/*
+Session user information structure
 $_SESSION['student_info'] = array(
     'is_auth' => 1, // 0: not login, 1: login
     'id'.....
@@ -12,14 +20,13 @@ $_SESSION['admin_info'] = array(
     'id'.....
 );
 */
-
 //Check for admin login feature
 if( substr($_SERVER['REQUEST_URI'], 1, 5) == 'admin' &&
     substr($_SERVER['REQUEST_URI'], 0, 16) != '/admin/login.php' &&
     ( !isset( $_SESSION['admin_info']['is_auth'] ) || $_SESSION['admin_info']['is_auth'] != 1 )
 ){
-    header('Location: /admin/login.php');
-    exit();
+    //header('Location: /admin/login.php');
+    //exit();
 }
 
 //@todo: public login check

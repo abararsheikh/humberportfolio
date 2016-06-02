@@ -40,3 +40,9 @@ Request Date: June 1
 Requester: Aysen
 Description: input is email address and content, send an email to that email address which has the cntent.
 Programmer Incharge - Zarna
+
+Function Name :Email Validation
+Request Date: June 1
+Requester: Ran
+Description: Input is password and return an encrypted password.
+Programmer Incharge - Akshi

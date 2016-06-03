@@ -9,7 +9,7 @@ $admin_custom_css = array(
 
 );
 
-//Custom Css
+//Custom js
 $admin_custom_js = array(
   //eg. '/admin/asset/my.js'
 

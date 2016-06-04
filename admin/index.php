@@ -20,9 +20,7 @@ include DIR_BASE . 'admin/public_sidebar.view.php';
 ?>
 
 
-  <div id="page-wrapper">
 
-    <div class="container-fluid">
 
       <!-- Page Heading -->
       <div class="row">

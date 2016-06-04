@@ -16,7 +16,7 @@ $admin_custom_js = array(
 );
 
 include DIR_BASE . 'admin/public_header.view.php';
-include DIR_BASE . 'admin/public_sidebar.view.php';
+
 ?>
 
 

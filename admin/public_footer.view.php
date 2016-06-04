@@ -4,7 +4,7 @@
 <!-- /#wrapper -->
 
 <!-- jQuery -->
-<script src="/vendor/components/jquery/jquery.min.js"></script>
+<script src="https://code.jquery.com/jquery-1.12.4.min.js" integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ=" crossorigin="anonymous"></script>
 
 <!-- Bootstrap Core JavaScript -->
 <script src="/vendor/twbs/bootstrap/dist/js/bootstrap.min.js"></script>

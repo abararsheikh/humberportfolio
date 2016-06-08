@@ -1,7 +1,8 @@
 <?php
 
 ?>
-<!--structure is based on student pages pdf from the design team-->
+<!--structure is based on student pages version 2 pdf from the design team-->
+<button type="button">Logout</button>
 <section class="student-profile">
   <div id="profile-info">
     <h1 id="username">
@@ -27,4 +28,10 @@
     </p>
     <img src="#" alt="image description"/>
   </div>
+  
+  <button type="button">Upload a Project</button>
+  <button type="button">Edit a Project</button>
+  <button type="button">Delete a Project</button>
+  <button type="button">Edit Profile</button>
+  <button type="button">Change Password</button>
 </section>

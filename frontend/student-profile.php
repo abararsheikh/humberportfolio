@@ -43,6 +43,9 @@
     </p>
     <img src="#" alt="image description"/>
   </div>
+
+</section>
+
   
   <button type="button">Upload a Project</button>
   <button type="button">Edit a Project</button>
@@ -50,3 +53,4 @@
   <button type="button">Edit Profile</button>
   <button type="button">Change Password</button>
 </section>
+

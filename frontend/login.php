@@ -1,5 +1,5 @@
 <?php
-include('../bootstrap.php' ); //This file is incuded to start the session 
+include('../bootstrap.php' ); //This file is incuded to start the session and for DB connection 
 //session_start();//session starts here  
 if(isset($_POST['submit']))
 {  
@@ -26,6 +26,7 @@ if(isset($_POST['submit']))
            // is_auth is  we will test this to make sure they can view other pages// that are needing credentials.
           $_SESSION['is_auth'] = true;
           $_SESSION['student_id'] = $row['id'];
+        
           //$_SESSION['name'] = $row['name'];
           // Once the sessions variables have been set, redirect them to the landing page / home page.
           header('location:frontend/student-profile.php');

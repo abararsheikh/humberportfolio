@@ -28,7 +28,7 @@ if(isset($_POST['submit']))
           $_SESSION['is_auth'] = true;
           $_SESSION['student_id'] = $row['id'];
         
-          $_SESSION['student_firstname'] = $row['first'];
+          $_SESSION['student_firstname'] = $row['first_name'];
           // Once the sessions variables have been set, redirect them to the landing page / home page.
           header('location:frontend/teststudent.php');
         

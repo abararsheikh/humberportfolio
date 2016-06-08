@@ -39,6 +39,7 @@ Thumbs.db
 ######################
 config.php
 vendor/
+components/
 
 .idea/
 tests/_output/*

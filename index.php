@@ -27,12 +27,16 @@ include "./frontend/login.php";
         <div class="login-button">
             <input type="submit" name="submit" value="Login" title="Login now">
         </div>
-         <?php
+      
+      <p style="color:red">
+          <?php
             if(isset($error))
-            {
+            {              
                 echo $error;
             }
        ?>
+      </p>
+       
 
     </form>
     <p>

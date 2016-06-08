@@ -1,4 +1,5 @@
 <?php
+include('../bootstrap.php' );
 
 ?>
 <!--structure is based on student pages pdf from the design team-->
@@ -28,3 +29,9 @@
     <img src="#" alt="image description"/>
   </div>
 </section>
+
+<br/>
+<b>Welcome : <i><?php echo  $_SESSION['student_firstname'] ; ?></i></b>
+<div>
+  <a href="logout.php">Logout</a>
+</div>

@@ -10,6 +10,8 @@ if ( $_POST['password'] === $_POST['password_confirm'] )
   $id = $_SESSION['student_id'];
   $password = $_POST['password'];
   change_password( $id, $password);
+  setCookie("jcPassSucc", "<span class='jc-pass-succ'>Password reset successful!</span>", time() + 5);
+  header('Location: change_password.php');
 }
 else
 {

@@ -2,8 +2,16 @@ $(document).ready(function ()
 {
   
   //Inline validation
+  $('#password').change( function ()
+  {
+    // Reset the pass message
+    $('.jc-pass-succ').html("");
+  });
+  
   $('#password_confirm').change( function () 
   {
+    // Reset the pass message
+    $('.jc-pass-succ').html("");
     checkPasswords();
   });
   
@@ -11,6 +19,8 @@ $(document).ready(function ()
   $('#pass-submit').click( function(e) 
   {
     e.preventDefault();
+    // Reset the pass message
+    $('.jc-pass-succ').html("");
     var passed = checkPasswords();
     var passedValidation = validate();
     

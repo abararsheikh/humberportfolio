@@ -1,3 +1,8 @@
+<!-- This is where the success message goes -->
+<div class="jc-pass-succ-wrapper">
+  <?php if (isset( $_COOKIE["jcPassSucc"] )) { echo $_COOKIE["jcPassSucc"]; } ?>
+</div>
+
 <!-- Change password form -->
 <form action="change_password_handler.php" method="POST" id="change_pass_form">
   

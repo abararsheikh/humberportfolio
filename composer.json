@@ -4,7 +4,7 @@
 
         "fortawesome/font-awesome": "v4.0.3",
       //  "components/jquery": "1.9.*",
-        "components/jquery": "^2.2"   
+        "components/jquery": "^2.2"
     },
     "require-dev": {
         "codeception/verify": "*"

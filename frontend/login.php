@@ -13,13 +13,14 @@ if(isset($_POST['submit']))
       $query="SELECT * from students where email = '$email' AND password = '$password'";
       $result= $db->prepare($query);
       $result->execute();
+      $count=$result->rowCount();
       $row = $result->fetch();      
       $result->closeCursor();
       //var_dump($row);
          
       //If the user record was found, compare the password on record to the one provided hashed as necessary.
 
-      if($row !== false)
+      if($row !== false && $row > 0)
       {
       //  if($row['password']==hash('sha256',$password))
       //  {
@@ -40,7 +41,10 @@ if(isset($_POST['submit']))
      //   }
         
       }    
-      
+      else if(empty($_POST['email']) || empty($_POST['password']))
+      {
+        $error = "Please enter an email and password to login. !";
+      }
        else 
        {
          $error = "Invalid email or password. Please try again.";

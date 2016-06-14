@@ -1,7 +1,7 @@
 <?php
 
 include( 'bootstrap.php' );
-include "login.php";
+include "./frontend/login.php";
 
 <<<<<<< HEAD
 $query = 'SELECT *
@@ -30,29 +30,29 @@ while( $record = mysql_fetch_assoc( $result ) )
     <h1>
       Welcome to Portfolio Tool
     </h1>
-    <form method="post" action="">
-        <?php
-
-            if(isset($error))
-            {
-                echo $error;
-            }
-
-       ?>
+    <form method="post" action="">   
 
         <div>
             <label for="email">Email:</label>
             <input type="text" name="email" placeholder="Email Address" maxlength="100">
         </div>
-
         <div class="form-row">
             <label for="password">Password:</label>
             <input type="password" name="password" placeholder="Password" maxlength="100">
-        </div>
-      
+        </div>      
         <div class="login-button">
             <input type="submit" name="submit" value="Login" title="Login now">
         </div>
+      
+      <p style="color:red">
+          <?php
+            if(isset($error))
+            {              
+                echo $error;
+            }
+       ?>
+      </p>
+       
 
     </form>
     <p>

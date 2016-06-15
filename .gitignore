@@ -43,4 +43,5 @@ components/
 
 .idea/
 tests/_output/*
+tests/_data/
 node_modules/

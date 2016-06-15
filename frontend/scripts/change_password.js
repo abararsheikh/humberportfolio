@@ -4,27 +4,40 @@ $(document).ready(function ()
   //Inline validation
   $('#password').change( function ()
   {
-    // Reset the pass message
-    $('.jc-cp-pass-succ').html("");
+    resetFields();
+    //Validate for empty fields
+    var theInput = $(this);
+    inlineValidateEmpty(theInput);
   });
   
   $('#password_confirm').change( function () 
   {
-    // Reset the pass message
-    $('.jc-cp-pass-succ').html("");
-    checkPasswords();
+    resetFields();
+    //Validate for empty fields
+    var theInput = $(this);
+    var noEmpty = inlineValidateEmpty(theInput);
+    //Validate for matching passwords
+    if ( noEmpty )
+    {
+      checkPasswords();
+    }
+    
   });
   
   //Check for validation before submitting
   $('#pass-submit').click( function(e) 
   {
     e.preventDefault();
-    // Reset the pass message
-    $('.jc-pass-succ').html("");
-    var passedValidation = validate();
-    var passed = checkPasswords(); 
+    resetFields();
     
-    if (passed && passedValidation)
+    var noEmpty = validateEmpty(); //are there empty fields?
+    var passMatch;
+    if (noEmpty)
+    {
+      passMatch = checkPasswords();  //do the passwords match?
+    }
+    
+    if ( noEmpty && passMatch )
     {
       $('#change_pass_form').submit();
     }
@@ -56,7 +69,7 @@ function checkPasswords()
   
 }
 
-function validate() 
+function validateEmpty() 
 {
   
   var passed = "";
@@ -70,13 +83,37 @@ function validate()
       $('.jc-cp-pass-err-wrap').html("<span class='jc-req-err jc-pass-err''>*Required.</span>");
       passed += false;
     }
-    else
-    {
-      $(this).prev('.asterisk').html("");
-    }
+    
   });
   
   passed = passed === "" ? true : false; 
   return passed;
   
+}
+
+function inlineValidateEmpty(theInput)
+{
+  var passed = "";
+  
+  // Validate empty fields
+  if ( $(theInput).val() === "" )
+  {
+    $(theInput).prev('.asterisk').html("*");
+    $('.jc-cp-pass-err-wrap').html("<span class='jc-req-err jc-pass-err''>*Required.</span>");
+    passed += false;
+  }
+  
+  passed = passed === "" ? true : false; 
+  return passed;
+   
+}
+
+function resetFields ()
+{
+      //Reset the pass message
+    $('.jc-cp-pass-succ').html("");
+    //Reset the asterisk
+    $('.asterisk').html("");
+    //Reset the error message
+    $('.jc-cp-pass-err-wrap').html("");
 }

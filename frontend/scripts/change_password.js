@@ -5,13 +5,13 @@ $(document).ready(function ()
   $('#password').change( function ()
   {
     // Reset the pass message
-    $('.jc-pass-succ').html("");
+    $('.jc-cp-pass-succ').html("");
   });
   
   $('#password_confirm').change( function () 
   {
     // Reset the pass message
-    $('.jc-pass-succ').html("");
+    $('.jc-cp-pass-succ').html("");
     checkPasswords();
   });
   
@@ -21,8 +21,8 @@ $(document).ready(function ()
     e.preventDefault();
     // Reset the pass message
     $('.jc-pass-succ').html("");
-    var passed = checkPasswords();
     var passedValidation = validate();
+    var passed = checkPasswords(); 
     
     if (passed && passedValidation)
     {
@@ -39,12 +39,16 @@ function checkPasswords()
   
   if ( $('#password_confirm').val() != $('#password').val() ) 
   {
-    $('.jc-pass-err-wrap').html("<span class='jc-match-err jc-pass-err''>Passwords must match!</span>");
+    //Asterisks
+    $('.asterisk').each(function () {
+      $(this).html('*');
+    });
+    //Error message
+    $('.jc-cp-pass-err-wrap').html("<span class='jc-match-err jc-pass-err''>Password does not match</span>");
     passed = false;
   }
   else
   {
-    $('.jc-pass-err-wrap').html("");
     passed = true;
   }
   
@@ -62,8 +66,13 @@ function validate()
     // Validate empty fields
     if ( $(this).val() === "" )
     {
-      $(this).next('.jc-pass-err-wrap').html("<span class='jc-req-err jc-pass-err''>*Required.</span>");
+      $(this).prev('.asterisk').html("*");
+      $('.jc-cp-pass-err-wrap').html("<span class='jc-req-err jc-pass-err''>*Required.</span>");
       passed += false;
+    }
+    else
+    {
+      $(this).prev('.asterisk').html("");
     }
   });
   

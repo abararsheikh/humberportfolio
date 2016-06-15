@@ -11,7 +11,7 @@ function forgot_password ($email_parameter, $type_parameter){
   $client_message = change_password($email_parameter, $new_password, $type_parameter);
   $client_message .= ' - please check your email for instructions.';
   
-  //email new password to user - call Zarna's function
+  //email new password to user
   $email_subject = 'Password Reset';
   $email_message = "
   <html>

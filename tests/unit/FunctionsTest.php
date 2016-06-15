@@ -8,7 +8,7 @@ class FunctionsTest extends \Codeception\TestCase\Test
       // run it 30 times to have some randomness
       for ($i = 0; $i < 30; $i++)
       {
-        $this->test_random_string();
+//        $this->test_random_string();
       }
     }
 
@@ -19,7 +19,7 @@ class FunctionsTest extends \Codeception\TestCase\Test
         {
           expect( strlen(random_string()) )->equals(8);
         });
-
+        
         $this->specify('password length is the same as value passed in', function()
         {
           expect( strlen(random_string(10)) )->equals(10);

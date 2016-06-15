@@ -1,9 +1,8 @@
 <?php
-//include( 'bootstrap.php' ); //This file is incuded to start the session 
-session_start();//session starts here  
+//include('../bootstrap.php' ); //This file is incuded to start the session and for DB connection 
+//session_start();//session starts here  
 if(isset($_POST['submit']))
 {  
-//echo "Hello" ."<br/>";
     if (isset($_POST['email']) && isset($_POST['password'])) 
     {
       $email = $_POST['email'];
@@ -14,25 +13,26 @@ if(isset($_POST['submit']))
       $query="SELECT * from students where email = '$email' AND password = '$password'";
       $result= $db->prepare($query);
       $result->execute();
+      $count=$result->rowCount();
       $row = $result->fetch();      
       $result->closeCursor();
-      var_dump($row);
-     // echo $email ."<br/>";
-     // echo $password;      
+      //var_dump($row);
+         
       //If the user record was found, compare the password on record to the one provided hashed as necessary.
 
-      if($row !== false)
+      if($row !== false && $row > 0)
       {
       //  if($row['password']==hash('sha256',$password))
       //  {
            // is_auth is  we will test this to make sure they can view other pages// that are needing credentials.
           $_SESSION['is_auth'] = true;
           $_SESSION['student_id'] = $row['id'];
-          //$_SESSION['name'] = $row['name'];
+        
+          $_SESSION['student_firstname'] = $row['first_name'];
           // Once the sessions variables have been set, redirect them to the landing page / home page.
-         // header('location: index.php');
-        echo "loggedin";
-         // exit;                    
+          header('location:frontend/teststudent.php');
+        
+          exit;                    
 
     //    }
         //else
@@ -41,7 +41,10 @@ if(isset($_POST['submit']))
      //   }
         
       }    
-      
+      else if(empty($_POST['email']) || empty($_POST['password']))
+      {
+        $error = "Please enter an email and password to login. !";
+      }
        else 
        {
          $error = "Invalid email or password. Please try again.";

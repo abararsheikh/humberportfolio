@@ -10,6 +10,11 @@
       $result = $statement->fetchAll();      
       $statement->closeCursor();
 ?>
+<!--remove this once the real master head is established-->
+<head>
+  <link rel="stylesheet" href="../vendor/fortawesome/font-awesome/css/font-awesome.min.css">
+</head><!-- /remove this -->
+
 <div>
   <table class="table table-bordered" border="1">
     <thead style="color:rosybrown;font-size: 24px;">
@@ -34,5 +39,13 @@
     
     
   </table>
+  
+  <!--sample project form. Replace this with a foreach loop-->
+  <form action="project_handler.php" method="post" class="form form-project">
+    <input type="hidden" value="1" name="projects_id" /><!--replace this value with the projects_id value from the database-->
+    <button type="submit" name="delete" class="btn btn-delete btn-project-delete">
+      <span class='fa fa-times' aria-hidden='true'></span><span class="span-delete">DELETE</span>
+    </button>
+  </form><!-- /sample project form-->
   
 </div>

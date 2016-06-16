@@ -51,8 +51,13 @@ function forgot_password ($email_parameter, $type_parameter){
   </html>";
   
   //This will call the send_email function when completed.
-  send_email($email_parameter,$email_subject,$email_message);
+  $email_sent = send_email($email_parameter,$email_subject,$email_message);
   
-  //return message to front end for results page
-  return $client_message;
+  if($email_sent){
+    //return message to front end for results page
+    return $client_message; 
+  }
+  else{
+    return "I'm sorry - the email could not be sent. Please contact us for support if the issue persists";
+  }
 }

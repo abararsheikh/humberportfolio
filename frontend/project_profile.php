@@ -4,7 +4,7 @@
       $db = Database::getDB();
     
       //$query="SELECT * FROM projects ORDER BY name ASC";
-      $query = "SELECT projects.name,projects.description,images.image,students.website_link FROM students INNER JOIN  projects ON students.id = projects.students_id INNER JOIN images ON projects.id = images.projects_id ORDER BY projects.name ASC";
+      $query = "SELECT projects.name,projects.description,images.image,students.website_link FROM students INNER JOIN  projects ON students.id = projects.students_id LEFT JOIN images ON projects.id = images.projects_id ORDER BY projects.name ASC";
       $statement= $db->prepare($query);
       $statement->execute();     
       $result = $statement->fetchAll();      

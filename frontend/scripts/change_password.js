@@ -111,7 +111,7 @@ function inlineValidateEmpty(theInput)
 function resetFields ()
 {
       //Reset the pass message
-    $('.jc-cp-pass-succ').html("");
+    $('.jc-cp-pass-succ-wrapper').html("");
     //Reset the asterisk
     $('.asterisk').html("");
     //Reset the error message

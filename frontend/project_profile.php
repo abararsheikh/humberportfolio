@@ -15,8 +15,6 @@
   <link rel="stylesheet" href="../vendor/fortawesome/font-awesome/css/font-awesome.min.css">
 </head><!-- /remove this -->
 
-<span class='fa fa-times aria-hidden='true''></span>
-
 <div>
   <table class="table table-bordered" border="1">
     <thead style="color:rosybrown;font-size: 24px;">

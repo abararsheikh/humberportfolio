@@ -1,14 +1,11 @@
 <!-- Change password form -->
 <form action="change_password_handler.php" method="POST" id="change_pass_form">
   
-<!-- This is where the success message goes -->
-<div class="jc-cp-pass-succ-wrapper">
-  <?php if (isset( $_COOKIE["jcPassSucc"] )) { echo $_COOKIE["jcPassSucc"]; } ?>
-</div>
-  
+  <h2>Change Password</h2>
+    
   <!-- Password -->
   <div class="jc-cp-field-wrapper">  
-    <label for="password">New Password:</label>
+    <label for="password">Password:</label>
     <span class="asterisk"></span>
     <input type="password" name="password" id="password" />
   </div><!-- /Password -->
@@ -27,6 +24,11 @@
     </div><!-- /error message -->
   
   <input type="submit" value="Change Password" name="btn-submit" id="pass-submit" />
+  
+  <!-- This is where the success message goes -->
+  <div class="jc-cp-pass-succ-wrapper">
+    <?php if (isset( $_COOKIE["jcPassSucc"] )) { echo $_COOKIE["jcPassSucc"]; } ?>
+  </div><!-- /success message-->
   
 </form>
 

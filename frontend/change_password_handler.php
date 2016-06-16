@@ -10,7 +10,7 @@ if ( $_POST['password'] === $_POST['password_confirm'] && $_POST['password'] != 
   $id = $_SESSION['student_id'];
   $password = $_POST['password'];
   change_password( $id, $password);
-  setCookie("jcPassSucc", "<span class='jc-cp-pass-succ'>Password reset successful!</span>", time() + 5);
+  setCookie("jcPassSucc", "<span class='jc-cp-pass-succ-msg'>Your password has been updated</span><a href='project_profile.php' class='jc-cp-pass-succ-link'>Click here to go back to your profile</a>", time() + 5);
   header('Location: change_password.php');
 }
 // Check for empty values

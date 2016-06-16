@@ -44,7 +44,7 @@
   <form action="project_handler.php" method="post" class="form form-project">
     <input type="hidden" value="1" name="projects_id" /><!--replace this value with the projects_id value from the database-->
     <button type="submit" name="delete" class="btn btn-delete btn-project-delete">
-      <span class='fa fa-times aria-hidden='true''></span><span class="span-delete">DELETE</span>
+      <span class='fa fa-times' aria-hidden='true'></span><span class="span-delete">DELETE</span>
     </button>
   </form><!-- /sample project form-->
   

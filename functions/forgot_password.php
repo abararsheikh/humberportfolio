@@ -4,6 +4,29 @@
 //After calling the mailer function, send_password will return a user message that can be implemented on a results page.
 
 function forgot_password ($email_parameter, $type_parameter){
+  
+  //Checks if the email address exists in the database
+  if($type_parameter === 'admin'){
+    $table = 'administrators';
+  }
+  else{
+    $table = 'students';
+  }
+  
+  $db = Database::getDB();
+  $db->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+  $has_rows = "SELECT * FROM $table WHERE email = :email_parameter";
+  $prepared = $db->prepare($has_rows);
+
+  $prepared->bindParam(':email_parameter', $email_parameter);
+  $prepared->execute();
+  $is_row = count($prepared->fetch());
+  
+  if($is_row == 0){
+    return "I'm sorry - that email address was not found.";
+  }
+  
+  
   //generate new random character string for password
   $new_password = random_string();
   
@@ -27,6 +50,7 @@ function forgot_password ($email_parameter, $type_parameter){
   </body>
   </html>";
   
+  //This will call the send_email function when completed.
   send_email($email_parameter,$email_subject,$email_message);
   
   //return message to front end for results page

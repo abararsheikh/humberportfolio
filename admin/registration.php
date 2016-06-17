@@ -19,6 +19,8 @@ if(isset($_POST['is_post'])){
     $email = filter_input(INPUT_POST,"email",FILTER_VALIDATE_EMAIL);
     $password = filter_input(INPUT_POST,"password");
     $confirm_password = filter_input(INPUT_POST,"confirm_password");
+//    $password=password_hash( $password, PASSWORD_BCRYPT);
+
     if(!empty($first_name) && !empty($last_name)
         && !empty($password)
         && !empty($confirm_password)
@@ -42,7 +44,7 @@ if(isset($_POST['is_post'])){
             $error_msg.="password and confirm password are not same<br/>";
             $has_error = true;
         }
-
+        $password=password_hash( $password, PASSWORD_BCRYPT);
         if(!$has_error){
             try {
                 $sql = "";
@@ -75,17 +77,19 @@ if(isset($_POST['is_post'])){
 
 include DIR_BASE . 'admin/public_header.view.php';
 ?>
-<?php echo "<h1 style='color:red'>123</h1>";
-    echo $sql?>
+
 <div style="min-height: 500px;">
     <!-- Page Heading -->
-    <div class="row">
-        <div class="col-lg-12">
-            <h1 class="page-header">
-                Admin System
-                <small>Register</small>
-            </h1>
-        </div>
+    <div class="col-lg-12">
+        <h1 class="page-header">
+            Administrators
+            <small>Overview</small>
+        </h1>
+        <ol class="breadcrumb">
+            <li class="active">
+                <i class="fa fa-dashboard"></i> Administrators
+            </li>
+        </ol>
     </div>
     <!-- /.row -->
     <?php

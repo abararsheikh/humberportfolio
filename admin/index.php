@@ -7,12 +7,6 @@
 
 include('../bootstrap.php');
 
-//Custom js
-$admin_custom_js = array(
-    '/admin/assets/js/administrator.js',
-
-);
-
 //Get All Admin Data
 $db = Database::getDB();
 $query = $db->prepare("SELECT * FROM `administrators`;");

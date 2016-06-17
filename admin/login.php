@@ -18,7 +18,7 @@ if( isset($_POST['is_post']) )
 
     //Get post data
     $email = filter_input( INPUT_POST, 'email', FILTER_SANITIZE_EMAIL );
-    $password = trim( filter_input( INPUT_POST, 'password' ) );
+    $password = (string)trim( filter_input( INPUT_POST, 'password' ) );
     
     if( !empty($email) && !empty($password) ){
 
@@ -30,15 +30,16 @@ if( isset($_POST['is_post']) )
         $stm->execute();
         $result = $stm->fetch(PDO::FETCH_ASSOC);
 
-        //Set Session@todo: check password
-        if( false !== $result ){
+        if( false === $result ){
+            $error_msg = 'No such record.';
+        }elseif( !password_verify($password,$result['password']) ){
+            $error_msg = 'Please check your password.';
+        }else{
+            //Login Success
             $result['is_auth'] = 1;
             $_SESSION['admin_info'] = $result;
             header('Location: /admin/index.php');
             exit();
-
-        }else{
-            $error_msg = 'No such record.';
         }
 
     }else{
@@ -83,11 +84,11 @@ include DIR_BASE . 'admin/public_header.view.php';
             <form role="form" method="post" action="<?php echo $_SERVER['PHP_SELF'] ?>">
 
                 <div class="form-group">
-                    <label for="email">Name</label>
+                    <label for="email">Email</label>
                     <input type="email" class="form-control" name="email" id="email" placeholder="Email" required>
                 </div>
                 <div class="form-group">
-                    <label for="password">Email</label>
+                    <label for="password">Password</label>
                     <input type="password" class="form-control" name="password" id="password" placeholder="Password" required>
                 </div>
 

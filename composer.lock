@@ -5,7 +5,6 @@
         "This file is @generated automatically"
     ],
     "hash": "e30afb5c7d6ace8f1853ff6b6348d1c8",
-    "content-hash": "301bbb343ffe0bbf35579d3513e26dba",
     "packages": [
         {
             "name": "components/jquery",

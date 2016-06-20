@@ -15,6 +15,7 @@ $Bio = $_POST['Bio'];
 $social_media = $_POST['social_media'];
 // Image
 $fp=addslashes(file_get_contents($_FILES['uploadedimage']['tmp_name'])); //will store the image to fp
+ $today = date('Y-m-d') ;
 
 //Documents folder, should exist in your host in there you're going to save the file just uploaded
 
@@ -29,6 +30,10 @@ if(empty($firstname)||empty($lastname)||empty($email) ||empty($password)||empty(
 }
 else
 {
-  echo "in editing mode";
+   $query = "UPDATE students SET first_name = '$firstname', last_name = '$lastname', email = '$email', 
+   password='$password', classes_id='$classid',updated_at='$today', website_link='$website_link',
+   bio='$Bio', social_media='$social_media', image='$fp' WHERE id='$studentId'";
+      $db->exec($query);
+    header('location: managestudentadmin.php');
 }
 ?>

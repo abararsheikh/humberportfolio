@@ -9,7 +9,7 @@ if ( $_POST['password'] === $_POST['password_confirm'] && $_POST['password'] != 
   $err = "";
   $id = $_SESSION['student_id'];
   $password = $_POST['password'];
-  change_password( $id, $password);
+  jc_change_password( $id, $password);
   setCookie("jcPassSucc", "<span class='jc-cp-pass-succ-msg'>Your password has been updated</span><a href='project_profile.php' class='jc-cp-pass-succ-link'>Click here to go back to your profile</a>", time() + 5);
   header('Location: change_password.php');
 }
@@ -27,7 +27,7 @@ elseif (  $_POST['password'] != $_POST['password_confirm'] )
 
 
 
-function change_password ($id, $password) 
+function jc_change_password ($id, $password)
 {
   $db = Database::getDB(); 
   $query = "UPDATE students

@@ -27,7 +27,7 @@ include DIR_BASE . 'admin/public_header.view.php';
         </li>
     </ol>
     <div>
-        <a href="/admin/admin_add.php"><button type="button" class="btn btn-primary">Add</button>
+        <a href="/admin/registration.php"><button type="button" class="btn btn-primary">Add</button>
     </div>
 </div>
 

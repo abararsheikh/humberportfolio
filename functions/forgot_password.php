@@ -6,23 +6,32 @@
 function forgot_password ($email_parameter, $type_parameter){
   
   //Checks if the email address exists in the database
-  if($type_parameter === 'admin'){
-    $table = 'administrators';
-  }
-  else{
-    $table = 'students';
-  }
+
+// testing group commented out.
+//  if($type_parameter === 'admin'){
+//    $table = 'administrators';
+//  }
+//  else{
+//    $table = 'students';
+//  }
+
+  //  testing: more secure way.
+  $tables = [
+      'students' => 'students',
+      'administrators' => 'administrators'
+  ];
   
   $db = Database::getDB();
   $db->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-  $has_rows = "SELECT * FROM $table WHERE email = :email_parameter";
+  $has_rows = "SELECT * FROM $tables[$type_parameter] WHERE email = :email_parameter";
   $prepared = $db->prepare($has_rows);
 
   $prepared->bindParam(':email_parameter', $email_parameter);
   $prepared->execute();
   $is_row = count($prepared->fetch());
   
-  if($is_row == 0){
+  if($is_row == 0)
+  {
     return "I'm sorry - that email address was not found.";
   }
   
@@ -51,13 +60,15 @@ function forgot_password ($email_parameter, $type_parameter){
     </html>";
   
   //This will call the send_email function when completed.
-  $email_sent = send_email($email_parameter,$email_subject,$email_message);
+  $email_sent = send_mail($email_parameter,$email_subject,$email_message);
   
-  if($email_sent){
+  if($email_sent)
+  {
     //return message to front end for results page
     return $client_message; 
   }
-  else{
+  else
+  {
     return "I'm sorry - the email could not be sent. Please contact us for support if the issue persists";
   }
 }

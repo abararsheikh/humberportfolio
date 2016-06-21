@@ -64,11 +64,13 @@ function send_mail($recipient_email, $email_subject, $email_content)
   }
   catch (phpmailerException $e)
   {
-    return $e->errorMessage();
+//    return $e->errorMessage();
+    return false;
   }
   catch (Exception $e)
   {
-    return $e->getMessage();
+//    return $e->getMessage();
+    return false;
   }
 
 }

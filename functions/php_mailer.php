@@ -40,13 +40,13 @@ function send_mail($recipient_email, $email_subject, $email_content)
 
     //Username to use for SMTP authentication - use full email address for gmail
     //NOTE: ADD HUMBERPORTFOLIO EMAIL ADDRESS AND PASSWORD HERE
-    $mail->Username = "example@gmail.com";
+    $mail->Username = "humberportfolio4@gmail.com";
     //Password to use for SMTP authentication
-    $mail->Password = "password";
+    $mail->Password = "Humberportfolio";
 
     //SENDER AND RECIPIENT SETTINGS
     //Set who the message is to be sent from
-    $mail->setFrom('username@gmail.com', 'Humber Portfolio');
+    $mail->setFrom('humberportfolio4@gmail.com', 'Humber Portfolio');
     //Set who the message is to be sent to
     $mail->addAddress((string)$recipient_email);
 
@@ -64,8 +64,8 @@ function send_mail($recipient_email, $email_subject, $email_content)
   }
   catch (phpmailerException $e)
   {
-//    return $e->errorMessage();
-    return false;
+    return $e->errorMessage();
+//    return false;
   }
   catch (Exception $e)
   {

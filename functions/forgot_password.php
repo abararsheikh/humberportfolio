@@ -36,19 +36,19 @@ function forgot_password ($email_parameter, $type_parameter){
   
   //email new password to user
   $email_subject = 'Password Reset';
-  $email_message = '
+  $email_message = "
     <html>
     <head>
-    <meta name="viewport" content="width=device-width">
-    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta name='viewport' content='width=device-width'>
+    <meta http-equiv='Content-Type' content='text/html; charset=UTF-8'>
     <title>Password Reset</title>
     <body>
       <h1>Your Password has been reset</h1>
       <p>Please follow the link below to access your account by typing in the new password provided</p>
       <h2>$new_password</h2>
-      <a href="#">Login to your account</a>
+      <a href='#'>Login to your account</a>
     </body>
-    </html>';
+    </html>";
   
   //This will call the send_email function when completed.
   $email_sent = send_email($email_parameter,$email_subject,$email_message);

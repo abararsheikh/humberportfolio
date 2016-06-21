@@ -25,8 +25,8 @@ if( substr($_SERVER['REQUEST_URI'], 1, 5) == 'admin' &&
     substr($_SERVER['REQUEST_URI'], 0, 16) != '/admin/login.php' &&
     ( !isset( $_SESSION['admin_info']['is_auth'] ) || $_SESSION['admin_info']['is_auth'] != 1 )
 ){
-    //header('Location: /admin/login.php');
-    //exit();
+    header('Location: /admin/login.php');
+    exit();
 }
 
 //@todo: public login check

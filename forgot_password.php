@@ -1,12 +1,16 @@
-<!DOCTYPE html>
+<!--<!DOCTYPE html>
 <header>
  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
  <link rel="stylesheet" href="frontend/css/gstyle.css" />
  <link href='https://fonts.googleapis.com/css?family=Raleway|Lato' rel='stylesheet' type='text/css'>
 <title>Forgot Password</title>
 <header>
+<body>-->
+	
+<?php include('header.php') ?>
+	
 <body>
-
+		
  <!--dont get rid of container-fluid it's required for bootstrap to work-->
 <div class="container-fluid">
 <!--Colored container for the form-->
@@ -59,4 +63,6 @@
 </form>
 </div>
 </div>
-</div>   
+</div>
+	
+<?php include('footer.php') ?>

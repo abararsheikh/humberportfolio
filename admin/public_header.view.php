@@ -87,7 +87,10 @@
                     <a href="index.html"><i class="fa fa-fw fa-dashboard"></i> Dashboard</a>
                 </li>
                 <li>
-                    <a href="charts.html"><i class="fa fa-fw fa-bar-chart-o"></i> Charts</a>
+                    <a href="managestudentadmin.php"><i class="fa fa-fw fa-bar-chart-o"></i> Manage Students</a>
+                </li>
+               <li>
+                    <a href="projectViews/projectsList.php"><i class="fa fa-fw fa-bar-chart-o"></i> Manage Projects</a>
                 </li>
                 <li>
                     <a href="tables.html"><i class="fa fa-fw fa-table"></i> Tables</a>

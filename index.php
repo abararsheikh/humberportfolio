@@ -1,7 +1,7 @@
 <?php
 
 include( 'bootstrap.php' );
-include "./frontend/login.php";
+include "login.php";
 
 /*
 $query = 'SELECT *
@@ -55,6 +55,9 @@ while( $record = mysql_fetch_assoc( $result ) )
        
 
     </form>
+    
+    <a href="forgot_password.php">Forgot password?</a>
+    
     <p>
       <?php echo random_string(); ?>
     </p>

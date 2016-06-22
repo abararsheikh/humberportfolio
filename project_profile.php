@@ -1,5 +1,5 @@
 <?php
-      include('../bootstrap.php' );
+      include('bootstrap.php' );
       //connect to databse  
       $db = Database::getDB();
     

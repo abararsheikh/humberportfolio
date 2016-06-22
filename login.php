@@ -30,7 +30,7 @@ if(isset($_POST['submit']))
         
           $_SESSION['student_firstname'] = $row['first_name'];
           // Once the sessions variables have been set, redirect them to the landing page / home page.
-          header('location:frontend/teststudent.php');
+          header('location:student_profile.php');
         
           exit;                    
 

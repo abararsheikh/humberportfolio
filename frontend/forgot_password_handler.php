@@ -22,8 +22,7 @@ else
   if (function_exists ('forgot_password'))
   {
     $jc_The_Email_Message = forgot_password($_POST['email'], 'students');
-    echo $jc_The_Email_Message;
-    /*if ($jc_The_Email_Message === "*Instructions about how to reset your password have been emailed to you")
+    if ($jc_The_Email_Message === "*Instructions about how to reset your password have been emailed to you")
     {
       setCookie("jcEmailSucc", "<span class='jc-email-succ'>" . $jc_The_Email_Message . "</span>", time() + 5);
       header('location: forgot_password.php');
@@ -32,6 +31,6 @@ else
     {
       setCookie("jcEmailErr", "<span class='jc-email-err jc-forgot-err''>" . $jc_The_Email_Message . "</span>", time() + 5);
       header('location: forgot_password.php');
-    }*/
+    }
   }  
 }

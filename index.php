@@ -2,9 +2,13 @@
 
 include( 'bootstrap.php' );
 include "./frontend/login.php";
-
 <<<<<<< HEAD
+
+/*$query = 'SELECT *
+=======
+/*
 $query = 'SELECT *
+>>>>>>> 1a22038fb8f0d84beed0f5b143f18425a62539cd
   FROM test';
 $result = mysql_query( $query, $connect ) or die( mysql_error() );
 
@@ -16,9 +20,13 @@ while( $record = mysql_fetch_assoc( $result ) )
   //echo $record['name'];
   echo '</pre>';
   
-}
-
+<<<<<<< HEAD
+}*/
 =======
+}
+*/
+>>>>>>> 1a22038fb8f0d84beed0f5b143f18425a62539cd
+
 ?>
 
 <html>
@@ -65,4 +73,3 @@ while( $record = mysql_fetch_assoc( $result ) )
     
   </body>
 </html>
->>>>>>> 496064d23acac08a5ae8beaf1195cff7b915d7d5

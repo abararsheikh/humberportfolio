@@ -1,21 +1,38 @@
+<!DOCTYPE html>
+<header>
+ <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+ <link rel="stylesheet" href="css/gstyle.css" />
+ <link href='https://fonts.googleapis.com/css?family=Raleway|Lato' rel='stylesheet' type='text/css'>
+<title>Change Password</title>
+</header>
+<body>
+
+<!--dont get rid of container-fluid it's required for bootstrap to work-->
+<div class="container-fluid">
+  
+<!--Colored container for the form-->
+	<div class="col-md-6 col-md-offset-3">
+	<div id="beigecolor">
+    
+  
 <!-- Change password form -->
 <form action="change_password_handler.php" method="POST" id="change_pass_form">
   
-  <h2>Change Password</h2>
+  <h2>CHANGE PASSWORD</h2><br/>
     
   <!-- Password -->
   <div class="jc-cp-field-wrapper">  
-    <label for="password">Password:</label>
+    <label for="password">Password:</label><br/>
     <span class="asterisk"></span>
-    <input type="password" name="password" id="password" />
-  </div><!-- /Password -->
+    <input type="password" class="form-control" name="password" id="password" />
+  </div><!-- /Password --><br/>
   
   <!-- Confirm password -->
   <div class="jc-cp-field-wrapper"> 
-    <label for="password_confirm">Confirm Password:</label>
+    <label for="password_confirm">Confirm Password:</label><br/>
     <span class="asterisk"></span>
-    <input type="password" name="password_confirm" id="password_confirm" />
-  </div><!-- /Confirm password -->
+    <input type="password" class="form-control" name="password_confirm" id="password_confirm" />
+  </div><!-- /Confirm password --><br/>
   
    <!-- error message -->
     <div class="jc-cp-pass-err-wrap">
@@ -34,4 +51,11 @@
 
 <script src="../vendor/components/jquery/jquery.min.js"></script>
 <script src="scripts/change_password.js"></script>
+    </div>
+  </div>
+</div>
+  
+</body>
+</html>
+ 
 

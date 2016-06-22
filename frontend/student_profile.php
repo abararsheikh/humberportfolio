@@ -14,7 +14,7 @@ try {
     <div id="profile">
         <img src="" id="profile-picture"> Students profile picture will go here <br/>
         <a href="" id="profile-edit">Edit Profile</a>
-        <a href="" id="profile-uploadproject">Upload Project</a>
+        <a href="add_project.php" id="profile-uploadproject">Upload Project</a>
         <a href="change_password.php" id="profile-changepass">Change Password</a>
         <h2 id="profile-name">
         First Name and Last Name
@@ -62,7 +62,7 @@ try {
         <?php echo "Project Images" ?>
         <br/>
         <?php echo "<a href=\"#\" id=\"project-edit\"> Edit </a>" ?>
-        <?php echo "<a href=\"#\" id=\"project-delete\"> Delete </a>" ?>
+        <?php echo "<a href=\"delete_project.php\" id=\"project-delete\"> Delete </a>" ?>
     </div>
 </section>
 

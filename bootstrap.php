@@ -34,6 +34,9 @@ if( substr($_SERVER['REQUEST_URI'], 1, 5) == 'admin' &&
 include( 'config.php' );
 
 include( 'functions/strings.php' );
+include( 'functions/forgot_password.php' );
+include( 'functions/change_password.php' );
+include( 'functions/php_mailer.php');
 
 //$connect = mysql_connect( MYSQL_HOST, MYSQL_USERNAME, MYSQL_PASSWORD ) or die( mysql_error() );
 //mysql_select_db( MYSQL_DATABASE, $connect ) or die( mysql_error() );

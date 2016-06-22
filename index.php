@@ -1,9 +1,9 @@
 <?php
 
 include( 'bootstrap.php' );
-include "./frontend/login.php";
+include "login.php";
 
-<<<<<<< HEAD
+/*
 $query = 'SELECT *
   FROM test';
 $result = mysql_query( $query, $connect ) or die( mysql_error() );
@@ -17,8 +17,8 @@ while( $record = mysql_fetch_assoc( $result ) )
   echo '</pre>';
   
 }
+*/
 
-=======
 ?>
 
 <html>
@@ -55,6 +55,9 @@ while( $record = mysql_fetch_assoc( $result ) )
        
 
     </form>
+    
+    <a href="forgot_password.php">Forgot password?</a>
+    
     <p>
       <?php echo random_string(); ?>
     </p>
@@ -65,4 +68,3 @@ while( $record = mysql_fetch_assoc( $result ) )
     
   </body>
 </html>
->>>>>>> 496064d23acac08a5ae8beaf1195cff7b915d7d5

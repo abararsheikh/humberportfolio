@@ -1,21 +1,33 @@
+<?php include('header.php'); ?>
+	
+<body>
+
+<!--dont get rid of container-fluid it's required for bootstrap to work-->
+<div class="container-fluid">
+  
+<!--Colored container for the form-->
+	<div class="col-md-6 col-md-offset-3">
+	<div id="beigecolor">
+    
+  
 <!-- Change password form -->
 <form action="change_password_handler.php" method="POST" id="change_pass_form">
   
-  <h2>Change Password</h2>
+  <h2>CHANGE PASSWORD</h2><br/>
     
   <!-- Password -->
   <div class="jc-cp-field-wrapper">  
-    <label for="password">Password:</label>
+    <label for="password">Password:</label><br/>
     <span class="asterisk"></span>
-    <input type="password" name="password" id="password" />
-  </div><!-- /Password -->
+    <input type="password" class="form-control" name="password" id="password" />
+  </div><!-- /Password --><br/>
   
   <!-- Confirm password -->
   <div class="jc-cp-field-wrapper"> 
-    <label for="password_confirm">Confirm Password:</label>
+    <label for="password_confirm">Confirm Password:</label><br/>
     <span class="asterisk"></span>
-    <input type="password" name="password_confirm" id="password_confirm" />
-  </div><!-- /Confirm password -->
+    <input type="password" class="form-control" name="password_confirm" id="password_confirm" />
+  </div><!-- /Confirm password --><br/>
   
    <!-- error message -->
     <div class="jc-cp-pass-err-wrap">
@@ -32,6 +44,10 @@
   
 </form>
 
-<script src="../vendor/components/jquery/jquery.min.js"></script>
-<script src="scripts/change_password.js"></script>
+    </div>
+  </div>
+</div>
+ 
+<?php include('footer.php'); ?>
+ 
 

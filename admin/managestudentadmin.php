@@ -45,6 +45,7 @@ $statement->closeCursor();
        <th>IMAGE</th>
     <th></th>
     <th></th>
+    <th></th>
     </tr>
   </thead>
 <?php foreach($result as $res):?>
@@ -76,6 +77,14 @@ $statement->closeCursor();
       <input type="hidden" name="student_id" value="<?php echo $res['id']; ?>" />
      <button type="submit" class="btn btn-info">
     <i class="fa fa-times"></i> Delete
+</button>
+     </form>
+    </td>
+     <td>
+     <form action = "detail_studentadmin.php" method="post">
+      <input type="hidden" name="student_id" value="<?php echo $res['id']; ?>" />
+     <button type="submit" class="btn btn-info">
+    <i class="fa fa-info"></i> Details
 </button>
      </form>
     </td>

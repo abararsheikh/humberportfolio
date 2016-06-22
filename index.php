@@ -39,6 +39,9 @@ include "login.php";
        
 
     </form>
+    
+    <a href="forgot_password.php">Forgot password?</a>
+    
     <p>
       <?php echo random_string(); ?>
     </p>

@@ -8,20 +8,7 @@
 
 include('../bootstrap.php');
 
-include DIR_BASE . 'admin/public_header.view.php';
-?>
 
-<div class="col-lg-12">
-    <h1 class="page-header">
-        Administrators
-        <small>Overview</small>
-    </h1>
-    <ol class="breadcrumb">
-        <li class="active">
-            <i class="fa fa-dashboard"></i> Administrators
-        </li>
-    </ol>
-  <?php
   // When the user clicks 'Edit' button next to the admin's account in the admin list, 
   // it will redirect to admin_edit.php page using GET method
     if(isset($_GET['id']) )
@@ -39,7 +26,7 @@ include DIR_BASE . 'admin/public_header.view.php';
   
   // POST method is called after the user finishes writing the information to be changed. 
   // This will redirect to the admin list page, after updating.
-  else if(isset($_POST['is_post'])){
+ else if(isset($_POST['is_post'])){
                 try {
           $first_name = $_POST["firstname"];
           $last_name = $_POST["lastname"];
@@ -47,7 +34,7 @@ include DIR_BASE . 'admin/public_header.view.php';
           $password = password_hash( $passwordinput, PASSWORD_BCRYPT);        
                   
           $id= $_POST["id"];
-          date_default_timezone_set ( "America/Toronto" ) ;  
+
           $update_time =date("Y-m-d H:i:s");
     
          $db = Database::getDB();
@@ -78,8 +65,24 @@ include DIR_BASE . 'admin/public_header.view.php';
          header('Location: /admin/index.php');
         exit();
   }
- 
-  ?>
+
+
+
+
+include DIR_BASE . 'admin/public_header.view.php';
+?>
+
+<div class="col-lg-12">
+    <h1 class="page-header">
+        Administrators
+        <small>Overview</small>
+    </h1>
+    <ol class="breadcrumb">
+        <li class="active">
+            <i class="fa fa-dashboard"></i> Administrators
+        </li>
+    </ol>
+
   
     <!-- Edit Form -->
     <div class="row">

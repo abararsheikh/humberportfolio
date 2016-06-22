@@ -23,11 +23,10 @@ function change_password($email_parameter, $password_parameter, $type_parameter)
     $update_statement = "UPDATE $table SET password := :password_parameter WHERE email = :email_parameter";
     $prepared = $db->prepare($update_statement);
 
-    $prepared->bindParam(':email_parameter', $email_parameter);
-    $prepared->bindParam(':password_parameter', $password_parameter);
-    $prepared->execute();
-
-    return 'Your password has been updated';
+  $prepared->bindParam(':email_parameter', $email_parameter);
+  $prepared->bindParam(':password_parameter', $password_parameter); 
+  $prepared->execute();
+    
   }
   
   //catch and return errors

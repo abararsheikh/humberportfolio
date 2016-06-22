@@ -2,55 +2,52 @@
 
 ?>
 <!--structure is based on student pages version 2 pdf from the design team-->
-<button type="button">Logout</button>
 <section class="student-profile">
-  <div id="profile-info">
-    <h1 id="username">
-      Username
-      <?php
-      
-      ?>
-    </h1>
-    <h2 id="student-name">
-      First Name and Last Name
-      <?php
-      
-      ?>
-    </h2>
-    <a href="#" id="student-website">Website Link</a>
-    <p>
-      Bio
-      <?php
-      
-      ?>
-    </p>
-  </div>
+    <div id="profile">
+        <img src="" id="profile-picture">
+        <h2 id="profile-name">
+        First Name and Last Name
+        <?php
+
+        ?>
+        </h2>
+    </div>
+    <div>
+        <p id="profile-bio">
+        Bio
+        <?php
+
+        ?>
+        </p>
+    </div>
+        <?php ?>
+    <div>
+        <button id="profile-email">
+            Email
+        </button>
+        <button id="profile-website">
+            Website
+        </button>
+        <button id="profile-twitter">
+            Twitter
+        </button>
+        <button id="profile-linkedin">
+            LinkedIn
+        </button>
+    </div>
+    <?php ?>
 </section>
 
 <section class="projects">
-  <div id="student-project">
-    <h2>
-      Project Name
-      <?php
-      
-      ?>
-    </h2>
-    <p id="student-project-description">
-      Project Description: The description of the students project will go right here.
-      <?php
-      
-      ?>
-    </p>
-    <img src="#" alt="image description"/>
-  </div>
-
-</section>
-
-  
-  <button type="button">Upload a Project</button>
-  <button type="button">Edit a Project</button>
-  <button type="button">Delete a Project</button>
-  <button type="button">Edit Profile</button>
-  <button type="button">Change Password</button>
+    Projects
+    <hr>
+    <div id="student-project">
+        <?php
+        //This needs to be a loop of sorts to display the different projects
+        //img src="#" alt="image description" id="projects-image">
+        //project name
+        //keyword/category
+        ?>
+    </div>
 </section>
 

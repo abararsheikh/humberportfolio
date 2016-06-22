@@ -14,55 +14,30 @@ include "login.php";
 
 </header>
 <main id="main">
-    <div class="accountform">
+ <form name="contact_form" action="add_newproject.php" method="post">
+       <div>
+               <label  for ="fname" style ="color:darkorange;font-size:30px;">First name</label>
+               <input type ="text" id ="fname" name ="user_fname" placeholder ="Type your first name" />
+      </div>
+<br>
+     <div>
+                <label  for ="lname" style ="color:darkorange;font-size:30px;">Last name</label>
+          <input type ="text" id ="lname" name ="user_lname" placeholder ="Type your last name" />
 
-        <h2 style ="font-size:35px;">Account Details change form</h2>
-
-        <form action="account_handler.php" method="POST">
-          <!-- firstname input -->
-        <label for="firstname">First name:</label>
-        <input type="firstname" name="firstname" id="firstname" />
-        <!-- error message goes here -->
-        <span class="err-msg"><?php if(isset($_POST['submit'])) { echo $err } ?></span>
-        <!-- Confirm firstname -->
-        <label for="firstname_confirm">First Name:</label>
-        <input type="firstname" name="firstname_confirm" id="firstname_confirm" />
-        <!-- error message goes here -->
-        <span class="err-msg"><?php if(isset($_POST['submit'])) { echo $err } ?></span>
-        <input type="submit" value="submit" name="submit" />
-          
-          <!-- lastname input -->
-        <label for="lastname">Last name:</label>
-        <input type="lastname" name="lastname" id="lasstname" />
-        <!-- error message goes here -->
-        <span class="err-msg"><?php if(isset($_POST['submit'])) { echo $err } ?></span>
-        <!-- Confirm lastname -->
-        <label for="lastname_confirm">Last Name:</label>
-        <input type="lastname" name="lastname_confirm" id="lastname_confirm" />
-        <!-- error message goes here -->
-        <span class="err-msg"><?php if(isset($_POST['submit'])) { echo $err } ?></span>
-        <input type="submit" value="submit" name="submit" />
-          
-        <!-- email input -->  
-        <label for="email">Email:</label>
-        <input type="email" name="email" id="email" />
-        <!-- error message goes here -->
-        <span class="err-msg"><?php if(isset($_POST['submit'])) { echo $err } ?></span>
-        <!-- Confirm email -->
-        <label for="email_confirm">Email:</label>
-        <input type="email" name="email_confirm" id="email_confirm" />
-        <!-- error message goes here -->
-        <span class="err-msg"><?php if(isset($_POST['submit'])) { echo $err } ?></span>
-        <input type="submit" value="submit" name="submit" />
-          </form>
     </div>
+     <br>
+<div>
+    <label  for ="email" style ="color:darkorange;font-size:30px;">Email:</label>
+    <input type ="email" id ="email" name ="user_email" placeholder ="john@example.com" />
+
+</div>
+<br>
+<div class="submit">
+    <button type ="submit" name="submit" id="submitbutton">
+        Submit
+    </button>
+ </div>
+  </form>
 </main>
-<footer id="footer">
-<nav id ="footer-content">
-        <ul>
-            <li><a href="#">&copy; copyright 2016</a></li>
-        </ul>
- </nav>
-</footer>
 </body>
 </html>

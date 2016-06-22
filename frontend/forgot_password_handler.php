@@ -19,7 +19,9 @@ elseif (!filter_var($_POST['email'],  FILTER_VALIDATE_EMAIL))
 
 else
 {
-  //Insert shared function here
-  setCookie("jcEmailSucc", "<span class='jc-email-succ'>Instructions about how to reset your password have been emailed to you.</span>", time() + 5);
-  header('location: forgot_password.php');
+  var sendMail = forgot_password($_POST['email'], 'students');
+ // echo sendMail;
+    
+  //setCookie("jcEmailSucc", "<span class='jc-email-succ'>Instructions about how to reset your password have been emailed to you.</span>", time() + 5);
+ // header('location: forgot_password.php');
 }

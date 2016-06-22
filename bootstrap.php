@@ -1,5 +1,7 @@
 <?php
 
+date_default_timezone_set ( "America/Toronto" ) ;  
+
 session_start();
 
 //Global Root Dir: /var/www/portfolio
@@ -25,8 +27,8 @@ if( substr($_SERVER['REQUEST_URI'], 1, 5) == 'admin' &&
     substr($_SERVER['REQUEST_URI'], 0, 16) != '/admin/login.php' &&
     ( !isset( $_SESSION['admin_info']['is_auth'] ) || $_SESSION['admin_info']['is_auth'] != 1 )
 ){
-    //header('Location: /admin/login.php');
-    //exit();
+    header('Location: /admin/login.php');
+    exit();
 }
 
 //@todo: public login check
@@ -34,6 +36,9 @@ if( substr($_SERVER['REQUEST_URI'], 1, 5) == 'admin' &&
 include( 'config.php' );
 
 include( 'functions/strings.php' );
+include( 'functions/forgot_password.php' );
+include( 'functions/change_password.php' );
+include( 'functions/php_mailer.php');
 
 //$connect = mysql_connect( MYSQL_HOST, MYSQL_USERNAME, MYSQL_PASSWORD ) or die( mysql_error() );
 //mysql_select_db( MYSQL_DATABASE, $connect ) or die( mysql_error() );

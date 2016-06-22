@@ -9,5 +9,5 @@ function chkCredentials( $username, $password )
 //checks the role of the user 
 function chkRole($username, $password)
 {
-
+    
 }

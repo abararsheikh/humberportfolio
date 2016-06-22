@@ -1,5 +1,5 @@
 <?php
-//include('../bootstrap.php' ); //This file is incuded to start the session and for DB connection 
+//include('../bootstrap.php' ); //This file is incuded to start the session and for DB connection
 //session_start();//session starts here  
 if(isset($_POST['submit']))
 {  
@@ -14,13 +14,13 @@ if(isset($_POST['submit']))
       $result= $db->prepare($query);
       $result->execute();
       $count=$result->rowCount();
-      $row = $result->fetch();      
+      $row = $result->fetch();
       $result->closeCursor();
-      //var_dump($row);
+//      var_dump($row);
          
       //If the user record was found, compare the password on record to the one provided hashed as necessary.
 
-      if($row !== false && $row > 0)
+      if($row !== false)
       {
       //  if($row['password']==hash('sha256',$password))
       //  {

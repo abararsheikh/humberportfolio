@@ -66,7 +66,7 @@
             <li class="dropdown">
                 <a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-user"></i>
                     <?php
-                        echo $_SESSION['admin_info'][ 'first' ] . ' ' . $_SESSION['admin_info'][ 'last' ];
+                        echo $_SESSION['admin_info'][ 'first_name' ] . ' ' . $_SESSION['admin_info'][ 'last_name' ];
                     ?>
 
                     <b class="caret"></b></a>
@@ -84,7 +84,7 @@
         <div class="collapse navbar-collapse navbar-ex1-collapse">
             <ul class="nav navbar-nav side-nav">
                 <li class="active">
-                    <a href="index.html"><i class="fa fa-fw fa-dashboard"></i> Dashboard</a>
+                    <a href="/admin/index.php"><i class="fa fa-fw fa-dashboard"></i> Administrators</a>
                 </li>
                 <li>
                     <a href="charts.html"><i class="fa fa-fw fa-bar-chart-o"></i> Charts</a>

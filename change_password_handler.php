@@ -1,7 +1,7 @@
 <?php
 
 // Get database connection
-require_once('../bootstrap.php');
+require_once('bootstrap.php');
 
 // Make sure both password fields match
 if ( $_POST['password'] === $_POST['password_confirm'] && $_POST['password'] != "" && $_POST['password_confirm'] != "" )

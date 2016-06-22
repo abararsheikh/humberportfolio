@@ -2,30 +2,6 @@
 
 include( 'bootstrap.php' );
 include "./frontend/login.php";
-<<<<<<< HEAD
-
-/*$query = 'SELECT *
-=======
-/*
-$query = 'SELECT *
->>>>>>> 1a22038fb8f0d84beed0f5b143f18425a62539cd
-  FROM test';
-$result = mysql_query( $query, $connect ) or die( mysql_error() );
-
-while( $record = mysql_fetch_assoc( $result ) )
-{
-  
-  echo '<pre>';
-   print_r( $record );
-  //echo $record['name'];
-  echo '</pre>';
-  
-<<<<<<< HEAD
-}*/
-=======
-}
-*/
->>>>>>> 1a22038fb8f0d84beed0f5b143f18425a62539cd
 
 ?>
 

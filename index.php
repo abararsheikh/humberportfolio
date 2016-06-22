@@ -2,8 +2,7 @@
 
 include( 'bootstrap.php' );
 include "./frontend/login.php";
-
-<<<<<<< HEAD
+/*
 $query = 'SELECT *
   FROM test';
 $result = mysql_query( $query, $connect ) or die( mysql_error() );
@@ -17,8 +16,8 @@ while( $record = mysql_fetch_assoc( $result ) )
   echo '</pre>';
   
 }
+*/
 
-=======
 ?>
 
 <html>
@@ -65,4 +64,3 @@ while( $record = mysql_fetch_assoc( $result ) )
     
   </body>
 </html>
->>>>>>> 496064d23acac08a5ae8beaf1195cff7b915d7d5

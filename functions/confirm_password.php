@@ -7,5 +7,3 @@ function confirm_password ($password, $confirmation){
     return true;
   }
 }
-
-?>

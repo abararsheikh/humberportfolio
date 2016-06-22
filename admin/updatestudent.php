@@ -15,7 +15,7 @@ $Bio = $_POST['Bio'];
 $social_media = $_POST['social_media'];
 // Image
 $fp=addslashes(file_get_contents($_FILES['uploadedimage']['tmp_name'])); //will store the image to fp
- $today = date('Y-m-d') ;
+ $today = date('Y-m-d H:i:s') ;
 
 //Documents folder, should exist in your host in there you're going to save the file just uploaded
 

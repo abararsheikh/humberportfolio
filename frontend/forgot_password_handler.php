@@ -19,9 +19,13 @@ elseif (!filter_var($_POST['email'],  FILTER_VALIDATE_EMAIL))
 
 else
 {
-  var sendMail = forgot_password($_POST['email'], 'students');
- // echo sendMail;
-    
+  if (function_exists (forgot_password))
+  {
+    //echo "exists";
+    var passMessage = forgot_password($_POST['email'], 'students');
+    //echo test;
+  }
+      
   //setCookie("jcEmailSucc", "<span class='jc-email-succ'>Instructions about how to reset your password have been emailed to you.</span>", time() + 5);
  // header('location: forgot_password.php');
 }

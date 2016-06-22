@@ -1,7 +1,7 @@
 <?php
 
 include( 'bootstrap.php' );
-include "./frontend/login.php";
+include "login.php";
 
 ?>
 

@@ -1,7 +1,7 @@
 <?php
 
 // Get database connection
-require_once('../bootstrap.php');
+require_once('bootstrap.php');
 
 // Check for empty values
 if ( $_POST['email'] === "")

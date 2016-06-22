@@ -85,7 +85,7 @@ if (!$update_statement)
 else
 {
   // get array of filenames in /sql folder
-  $updates_required = scandir('./sql');
+  $updates_required = scandir(DIR_BASE . '/sql');
   array_splice($updates_required, 0, 2);
   
   // fetch rows from db_updates table and create array of 

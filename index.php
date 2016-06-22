@@ -2,7 +2,6 @@
 
 include( 'bootstrap.php' );
 include "./frontend/login.php";
-<<<<<<< HEAD
 
 /*$query = 'SELECT *
 =======
@@ -22,10 +21,6 @@ while( $record = mysql_fetch_assoc( $result ) )
   
 <<<<<<< HEAD
 }*/
-=======
-}
-*/
->>>>>>> 1a22038fb8f0d84beed0f5b143f18425a62539cd
 
 ?>
 

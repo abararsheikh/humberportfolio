@@ -1,5 +1,7 @@
 <?php
 
+date_default_timezone_set ( "America/Toronto" ) ;  
+
 session_start();
 
 //Global Root Dir: /var/www/portfolio

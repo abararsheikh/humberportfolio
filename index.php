@@ -1,7 +1,7 @@
 <?php
 
 include( 'bootstrap.php' );
-include "login.php";
+include "./frontend/login.php";
 
 ?>
 
@@ -14,13 +14,7 @@ include "login.php";
     <h1>
       Welcome to Portfolio Tool
     </h1>
-    <form method="post" action="">
-        <?php
-            if(isset($error))
-            {
-                echo $error;
-            }
-       ?>
+    <form method="post" action="">   
 
         <div>
             <label for="email">Email:</label>
@@ -33,6 +27,16 @@ include "login.php";
         <div class="login-button">
             <input type="submit" name="submit" value="Login" title="Login now">
         </div>
+      
+      <p style="color:red">
+          <?php
+            if(isset($error))
+            {              
+                echo $error;
+            }
+       ?>
+      </p>
+       
 
     </form>
     <p>

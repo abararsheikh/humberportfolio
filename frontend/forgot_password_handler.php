@@ -1,5 +1,8 @@
 <?php
-
+/*Establish database connection and handles password change
+*@param string $email
+@param 
+*/
 // Get database connection
 require_once('../bootstrap.php');
 

@@ -23,18 +23,19 @@
         <?php ?>
     <div>
         <button id="profile-email">
-        Email
+            Email
         </button>
         <button id="profile-website">
-        Website
+            Website
         </button>
         <button id="profile-twitter">
-        Twitter
+            Twitter
         </button>
         <button id="profile-linkedin">
-        LinkedIn
+            LinkedIn
         </button>
     </div>
+    <?php ?>
 </section>
 
 <section class="projects">

@@ -6,31 +6,23 @@
 function forgot_password ($email_parameter, $type_parameter){
   
   //Checks if the email address exists in the database
-
-// testing group commented out.
-//  if($type_parameter === 'admin'){
-//    $table = 'administrators';
-//  }
-//  else{
-//    $table = 'students';
-//  }
-
-  //  testing: more secure way.
-  $tables = [
-      'students' => 'students',
-      'administrators' => 'administrators'
-  ];
+  if($type_parameter === 'admin'){
+    $table = 'administrators';
+  }
+  else{
+    $table = 'students';
+  }
   
   $db = Database::getDB();
   $db->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-  $has_rows = "SELECT * FROM $tables[$type_parameter] WHERE email = :email_parameter";
+  $has_rows = "SELECT * FROM $table WHERE email = :email_parameter";
   $prepared = $db->prepare($has_rows);
 
   $prepared->bindParam(':email_parameter', $email_parameter);
   $prepared->execute();
-  $is_row = count($prepared->fetch());
+  $is_row = $prepared->fetch();
   
-  if($is_row == 0){
+  if($is_row == false){
     return "*That email is not registered with us.";
   }
   
@@ -45,28 +37,26 @@ function forgot_password ($email_parameter, $type_parameter){
   //email new password to user
   $email_subject = 'Password Reset';
   $email_message = "
-    <html>
-    <head>
-    <meta name='viewport' content='width=device-width'>
-    <meta http-equiv='Content-Type' content='text/html; charset=UTF-8'>
-    <title>Password Reset</title>
-    <body>
-      <h1>Your Password has been reset</h1>
-      <p>Please follow the link below to access your account by typing in the new password provided</p>
-      <h2>$new_password</h2>
-      <a href='#'>Login to your account</a>
-    </body>
-    </html>";
+  <html>
+  <head>
+  <meta name="viewport" content="width=device-width">
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <title>Password Reset</title>
+  <body>
+    <h1>Your Password has been reset</h1>
+    <p>Please follow the link below to access your account by typing in the new password provided</p>
+    <h2>$new_password</h2>
+    <a href='#'>Login to your account</a>
+  </body>
+  </html>";
   
   //This will call the send_email function when completed.
-  $email_sent = send_mail($email_parameter,$email_subject,$email_message);
+  $email_sent = send_email($email_parameter,$email_subject,$email_message);
   
-  if($email_sent)
-  {
+  if($email_sent){
     //return message to front end for results page
     return $client_message; 
   }
-
   else{
     return "I'm sorry - the email could not be sent. Please contact for support if the issue persists";
   }

@@ -19,13 +19,19 @@ elseif (!filter_var($_POST['email'],  FILTER_VALIDATE_EMAIL))
 
 else
 {
-  if (function_exists (forgot_password))
+  if (function_exists ('forgot_password'))
   {
-    //echo "exists";
-    var passMessage = forgot_password($_POST['email'], 'students');
-    //echo test;
-  }
-      
-  //setCookie("jcEmailSucc", "<span class='jc-email-succ'>Instructions about how to reset your password have been emailed to you.</span>", time() + 5);
- // header('location: forgot_password.php');
+    $jc_The_Email_Message = forgot_password($_POST['email'], 'students');
+    echo $jc_The_Email_Message;
+    /*if ($jc_The_Email_Message === "*Instructions about how to reset your password have been emailed to you")
+    {
+      setCookie("jcEmailSucc", "<span class='jc-email-succ'>" . $jc_The_Email_Message . "</span>", time() + 5);
+      header('location: forgot_password.php');
+    }
+    else
+    {
+      setCookie("jcEmailErr", "<span class='jc-email-err jc-forgot-err''>" . $jc_The_Email_Message . "</span>", time() + 5);
+      header('location: forgot_password.php');
+    }*/
+  }  
 }

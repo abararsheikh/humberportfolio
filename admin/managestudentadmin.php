@@ -1,4 +1,5 @@
 <?php
+
 /*
 Coded By:Loveleen Anand
 */
@@ -47,7 +48,9 @@ $statement->closeCursor();
        <th>IMAGE</th>
     <th></th>
     <th></th>
+
     <th></th>
+
     </tr>
   </thead>
 <?php foreach($result as $res):?>
@@ -82,6 +85,7 @@ $statement->closeCursor();
 </button>
      </form>
     </td>
+
      <td>
      <form action = "detail_studentadmin.php" method="post">
       <input type="hidden" name="student_id" value="<?php echo $res['id']; ?>" />

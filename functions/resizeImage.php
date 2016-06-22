@@ -4,8 +4,11 @@ include 'WideImage/WideImage.php';
 //it also changes the quality of the image
 function doresize($image, $width, $height, $quality)
 {
+  //loads the image
   $originalImage = WideImage::load($image);
+  //resizes the image
   $newImage = $image->resize($width, $height);
+  //changes the quality and returns the file
   return $newImage->save($newImage, $quality);
  
 }

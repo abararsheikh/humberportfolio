@@ -7,6 +7,7 @@
 
 include('../bootstrap.php');
 
+
 //Get All Admin Data
 $db = Database::getDB();
 $query = $db->prepare("SELECT * FROM `administrators`;");

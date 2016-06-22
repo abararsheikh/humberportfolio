@@ -1,3 +1,4 @@
+<?php
 //returns email error
 
 function valid_email($email) 

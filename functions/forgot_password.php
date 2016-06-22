@@ -20,9 +20,9 @@ function forgot_password ($email_parameter, $type_parameter){
 
   $prepared->bindParam(':email_parameter', $email_parameter);
   $prepared->execute();
-  $is_row = count($prepared->fetch());
+  $is_row = $prepared->fetch();
   
-  if($is_row == 0){
+  if($is_row == false){
     return "*That email is not registered with us.";
   }
   
@@ -39,8 +39,8 @@ function forgot_password ($email_parameter, $type_parameter){
   $email_message = "
   <html>
   <head>
-  <meta name="viewport" content="width=device-width">
-  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <meta name='viewport' content='width=device-width'>
+  <meta http-equiv='Content-Type' content='text/html; charset=UTF-8'>
   <title>Password Reset</title>
   <body>
     <h1>Your Password has been reset</h1>
@@ -51,7 +51,7 @@ function forgot_password ($email_parameter, $type_parameter){
   </html>";
   
   //This will call the send_email function when completed.
-  $email_sent = send_email($email_parameter,$email_subject,$email_message);
+  $email_sent = send_mail($email_parameter,$email_subject,$email_message);
   
   if($email_sent){
     //return message to front end for results page

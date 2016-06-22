@@ -3,6 +3,22 @@
 include( 'bootstrap.php' );
 include "./frontend/login.php";
 
+/*
+$query = 'SELECT *
+  FROM test';
+$result = mysql_query( $query, $connect ) or die( mysql_error() );
+
+while( $record = mysql_fetch_assoc( $result ) )
+{
+  
+  echo '<pre>';
+   print_r( $record );
+  //echo $record['name'];
+  echo '</pre>';
+  
+}
+*/
+
 ?>
 
 <html>

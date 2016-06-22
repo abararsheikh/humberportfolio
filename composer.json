@@ -1,11 +1,11 @@
 {
-    "require": {
-        "twbs/bootstrap": "^3.3",
-        "fortawesome/font-awesome": "v4.0.3",
-        "components/jquery": "^2.2",
-      "phpmailer/phpmailer": "~5.2"
-    },
-    "require-dev": {
-        "codeception/verify": "*"
-    }
+  "require": {
+    "twbs/bootstrap": "^3.3",
+    "fortawesome/font-awesome": "v4.0.3",
+    "components/jquery": "^2.2",
+    "phpmailer/phpmailer": "~5.2"
+  },
+  "require-dev": {
+      "codeception/verify": "*"
+  }
 }

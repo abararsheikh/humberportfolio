@@ -4,9 +4,8 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-<<<<<<< HEAD
-    "hash": "e30afb5c7d6ace8f1853ff6b6348d1c8",
-    "content-hash": "301bbb343ffe0bbf35579d3513e26dba",
+    "hash": "a19b43050c09e6a4762fe4598b9ae47b",
+    "content-hash": "1aa79ef16174afaab90bb92ea4767db7",
     "packages": [
         {
             "name": "components/jquery",
@@ -97,10 +96,7 @@
                 "icon"
             ],
             "time": "2013-11-05 12:35:21"
-=======
-    "hash": "c52dc8f492b72b9cfa6ce1fc0d188d9f",
-    "content-hash": "1115b2603508258d4d40b620f33e3184",
-    "packages": [
+        },
         {
             "name": "phpmailer/phpmailer",
             "version": "v5.2.16",
@@ -160,7 +156,6 @@
             ],
             "description": "PHPMailer is a full-featured email creation and transfer class for PHP",
             "time": "2016-06-06 09:09:37"
->>>>>>> b14f6da2cde999d4e5a352e3c665b37bd917ac44
         },
         {
             "name": "twbs/bootstrap",

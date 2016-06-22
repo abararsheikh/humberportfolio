@@ -14,7 +14,7 @@ try {
     <div id="profile">
         <img src="" id="profile-picture"> Students profile picture will go here <br/>
         <a href="" id="profile-edit">Edit Profile</a>
-        <a href="add_project.php" id="profile-uploadproject">Upload Project</a>
+        <a href="add_newproject.php" id="profile-uploadproject">Upload Project</a>
         <a href="change_password.php" id="profile-changepass">Change Password</a>
         <h2 id="profile-name">
         First Name and Last Name

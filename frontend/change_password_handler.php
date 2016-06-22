@@ -1,5 +1,14 @@
 <?php
 
+
+/*
+* Change password handler: established databse connection and ensure that the selected new password and confirm password matches. Finds the student $id in the students table on the databse.
+@param string $password
+*@param string $password_confirm
+*@param int $student_id 
+*@param int $id
+*/
+
 // Get database connection
 require_once('../bootstrap.php');
 
@@ -26,10 +35,22 @@ if ( $_POST['password'] === "" || $_POST['password_confirm'] === "")
   header('Location: change_password.php');
 }
 
+<<<<<<< HEAD
 /**
  * This is a comment from Test Group
 */
 function change_password ($id, $password) 
+=======
+/*
+*Once the new password and confirm password matched, uses the student id to to update the student password in the database.
+*@param int $id
+*@param string $db
+*@param string $password
+*@param string $query
+*/
+
+function jc_change_password ($id, $password)
+>>>>>>> 6de74deb9300c7f1e339aa800b9556d8b2842b08
 {
   $db = Database::getDB(); 
   $query = "UPDATE students

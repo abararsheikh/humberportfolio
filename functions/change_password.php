@@ -22,8 +22,7 @@ function change_password($email_parameter, $password_parameter, $type_parameter)
   $prepared->bindParam(':email_parameter', $email_parameter);
   $prepared->bindParam(':password_parameter', $password_parameter); 
   $prepared->execute();
-
-  return 'Your password has been updated';
+    
   }
   
   //catch and return errors

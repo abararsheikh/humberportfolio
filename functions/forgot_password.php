@@ -23,7 +23,7 @@ function forgot_password ($email_parameter, $type_parameter){
   $is_row = count($prepared->fetch());
   
   if($is_row == 0){
-    return "I'm sorry - that email address was not found.";
+    return "*That email is not registered with us.";
   }
   
   
@@ -31,8 +31,8 @@ function forgot_password ($email_parameter, $type_parameter){
   $new_password = random_string();
   
   //replace user's password in database
-  $client_message = change_password($email_parameter, $new_password, $type_parameter);
-  $client_message .= ' - please check your email for instructions.';
+  change_password($email_parameter, $new_password, $type_parameter);
+  $client_message = '*Instructions about how to reset your password have been emailed to you';
   
   //email new password to user
   $email_subject = 'Password Reset';
@@ -58,6 +58,6 @@ function forgot_password ($email_parameter, $type_parameter){
     return $client_message; 
   }
   else{
-    return "I'm sorry - the email could not be sent. Please contact us for support if the issue persists";
+    return "I'm sorry - the email could not be sent. Please contact for support if the issue persists";
   }
 }

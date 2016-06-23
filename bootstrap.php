@@ -39,6 +39,7 @@ include( 'functions/strings.php' );
 include( 'functions/forgot_password.php' );
 include( 'functions/change_password.php' );
 include( 'functions/php_mailer.php');
+include( 'functions/search_projects.php');
 
 //$connect = mysql_connect( MYSQL_HOST, MYSQL_USERNAME, MYSQL_PASSWORD ) or die( mysql_error() );
 //mysql_select_db( MYSQL_DATABASE, $connect ) or die( mysql_error() );

@@ -19,6 +19,11 @@ header h1 {
     color: #FFF;
 }
 
+#breadcrumb{
+    color:#414142;
+    font-weight: lighter;
+}
+
 .search {
     position: relative;
     min-width: 200px;

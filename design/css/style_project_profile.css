@@ -48,11 +48,15 @@ div {
 .btn {
     background: #414142;
     color: #FFFFFF;
+    font-weight: 200;
+    font-family: 'lato', sans-serif;
 }
 
 .btn:hover {
     background:#47a2da;
     color: #FFFFFF;
+    font-weight: 200;
+    font-family: 'lato', sans-serif;
 }
 
 #form {

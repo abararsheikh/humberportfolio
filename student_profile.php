@@ -2,13 +2,48 @@
     include('bootstrap.php' );
       //connect to databse  
     $db = Database::getDB();
-    $student_id= $_SESSION['student_id'];
-    $query="SELECT students.first_name,students.last_name,students.image,students.bio,students.social_media,
-            students.email,students.classes_id,students.website_link,projects.name,projects.keywords,images.image
-            FROM students LEFT JOIN projects ON students.id = projects.students_id LEFT JOIN images ON projects.id = images.projects_id WHERE students.id =$student_id";
+    $student_id = $_SESSION['student_id'];
+
+    $query="SELECT students.id,students.first_name,students.last_name,students.image,students.bio,students.social_media,
+            students.email,students.classes_id,students.website_link
+            FROM students WHERE students.id =$student_id";
+            
+    //$query = "SELECT * FROM students,projects WHERE students.id = $student_id";
     $statement= $db->prepare($query);
     $statement->execute();     
     $result = $statement->fetchAll();      
+    $statement->closeCursor();
+    foreach($result as $projectid) 
+    {
+      $st_id= $projectid['id'];
+    }
+/*
+    foreach($result as $students)
+    {
+       $student_fname= $students['first_name'];
+       $students['last_name'];
+       $students['bio'];
+       $students['social_media'];
+       $students['email'];
+       $students['classes_id'];
+       $students['website_link'];
+    }
+*/
+  //connect to the Image table to dipslay the projects image
+  //  $query="SELECT projects.id,projects.name,projects.keywords,students.id FROM students INNER JOIN projects
+  // ON students.id = projects.students_id";
+    $query="SELECT * FROM projects WHERE students_id = $st_id";
+    $statement= $db->prepare($query);
+    $statement->execute();     
+    $projectinfo = $statement->fetchAll();      
+    $statement->closeCursor();  
+   
+  //display Images based on project_ID
+     $query="SELECT * FROM images INNER JOIN projects ON images.projects_id =projects.id 
+     INNER JOIN students ON students.id= projects.students_id ";
+    $statement= $db->prepare($query);
+    $statement->execute();     
+    $imageinfo = $statement->fetchAll();      
     $statement->closeCursor();
 
 ?>
@@ -26,35 +61,52 @@
         <th>SocialMedia</th>
         <th>Email</th>
         <th>Class ID</th>        
-        <th>Website Link</th>
-        <th>Project Name</th>
-        <th>Keywords</th>
-        <th>Projects Images</th>
+        <th>Website Link</th>        
       </tr>
     </thead>
       
     <?php foreach($result as $students) : ?>
     <tbody>
       <tr>
-          <td><?php echo $students['first_name']; ?></td>
+          <td><?php echo $students['first_name'];; ?></td>
           <td><?php echo $students['last_name']; ?></td>  
           <td> <img src = "data:image/jpeg;base64,<?php echo base64_encode($students['image']);?>" style="width:200px;height:200px;"/></td>
           <td><?php echo $students['bio']; ?></td>
           <td><?php echo $students['social_media']; ?></td>
           <td><?php echo $students['email']; ?></td>
           <td><?php echo $students['classes_id']; ?></td>          
-          <td><?php echo $students['website_link']; ?></td>
-          <td><?php echo $students['name']; ?></td>
-          <td><?php echo $students['keywords']; ?></td>
-          <td> <img src = "data:image/jpeg;base64,<?php echo base64_encode($students['image']);?>" style="width:200px;height:200px;"/></td>
-        
+          <td><?php echo $students['website_link']; ?></td>         
       </tr>
     </tbody>
-    <?php endforeach; ?>
-    
-    
+    <?php endforeach; ?>   
   </table>
 </div>
+
+<div>
+  <table class="table table-bordered" border="1">
+    <thead >
+      <tr>
+        <th>Project Name</th>
+        <th>Keywords</th>
+        <th>Projects Images</th>               
+      </tr>
+    </thead>
+  <?php foreach($projectinfo as $projects) : ?>
+    <tbody>
+      <tr>               
+        <td><a href="project_profile.php?project_id=<?php echo $projects['id'];?>"><?php echo $projects['name']; ?></a></td>
+        <td><?php echo $projects['keywords']; ?></td>
+        <td></td>
+      </tr>
+    </tbody>    
+   <?php endforeach; ?>
+</div>
+  
+   <?php foreach($imageinfo as $images) : ?>
+  <div>
+    <img src = "data:image/jpeg;base64,<?php echo base64_encode($images['image']);?>" style="width:200px;height:200px;"/>
+  </div>
+  <?php endforeach; ?>
 <!--structure is based on student pages version 2 pdf from the design team-->
 <!--<button type="button">Logout</button>-->
 <p>

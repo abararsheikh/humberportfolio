@@ -50,16 +50,11 @@
                     <div class="input-group search">
                         <input type="text" class="form-control" placeholder="Search">
                             <span class="input-group-btn">
-        <button class="btn btn-default fa fa-search" type="button"></button>
-      </span>
+                              <button class="btn btn-default fa fa-search" type="button"></button>
+                            </span>
                     </div>
                     <!-- /input-group -->
-
-
                 </form>
-
-
-
             </div>
             <div class="navlist col-sm-10 col-xs-12">
                 <nav class="main-nav">
@@ -81,8 +76,8 @@
             </div>
 
             <div class="login-status col-sm-2 col-xs-12">
-                <div><span>First Name</span></div>
-                <a href="index.php">Log Out</a>
+                <div><span><?php echo  $_SESSION['student_firstname'] ;?></span></div>
+                <a href="logout.php">Log Out</a>
             </div>
 
         </div>

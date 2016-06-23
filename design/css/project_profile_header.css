@@ -29,7 +29,7 @@ header h1 {
 
 
 .search .fa-search {
-    background-color: #FFF;
+    background-color: none;
     color: #414142;
     position: relative;
     right: 30px;

@@ -3,6 +3,22 @@
 include( 'bootstrap.php' );
 include "login.php";
 
+/*
+$query = 'SELECT *
+  FROM test';
+$result = mysql_query( $query, $connect ) or die( mysql_error() );
+
+while( $record = mysql_fetch_assoc( $result ) )
+{
+  
+  echo '<pre>';
+   print_r( $record );
+  //echo $record['name'];
+  echo '</pre>';
+  
+}
+*/
+
 ?>
 
 <html>
@@ -39,6 +55,9 @@ include "login.php";
        
 
     </form>
+    
+    <a href="forgot_password.php">Forgot password?</a>
+    
     <p>
       <?php echo random_string(); ?>
     </p>

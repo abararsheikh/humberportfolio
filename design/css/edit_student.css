@@ -1,0 +1,192 @@
+@import url(https://fonts.googleapis.com/css?family=Lato:400,700);
+@import url(https://fonts.googleapis.com/css?family=Raleway:700,800);
+
+@import url("//maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css");
+
+*,
+*:before,
+*:after {
+    box-sizing: inherit;
+    font-size: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    box-sizing: border-box;
+}
+
+body {
+	font-family: 'Lato', sans-serif;
+    color: #414142;
+}
+
+h2{
+	font-family: 'Lato', sans-serif;
+	font-size: 40px;
+	color: #48453f;
+}
+
+h3{
+	font-family: 'Lato', sans-serif;
+	font-size: 20px;
+	color: #47a2da;
+	margin: 0;
+}
+
+.btn-default{
+	background-color: #414142;
+	border: none;
+	color: #FFF;
+}
+
+.btn-main{
+	margin: 10px;
+	width: 100px; 
+}
+
+.btn-default:hover{
+	background-color: #47a2da;
+	color: #FFF;
+}
+
+.red-font{
+	color: red;
+	font-weight: bold;
+}
+
+.icon{
+	padding-right: 10px;
+}
+
+/* HEADER */
+
+header {
+    margin: 0 auto;
+    padding-bottom: 10px;
+    font-family: "Raleway", sans-serif;
+    background-color: #414142;
+}
+
+header h1 {
+    font-size: 50px;
+    font-weight: 900;
+    color: #47a2da;
+}
+
+#portfolio {
+    color: #FFF;
+}
+
+.search {
+    position: relative;
+    min-width: 200px;
+    margin-top: 20px;
+    border: none;
+}
+
+.search .fa-search {
+    background-color: #FFF;
+   	color: #414142;
+    position: relative;
+    right: 30px;
+    box-shadow: none;
+  	left: 0;
+}
+
+.search .fa-search:hover {
+   	color: #47a2da;
+    position: relative;
+    right: 30px;
+    box-shadow: none;
+}
+
+/* NAV */
+
+.navlist {
+    display: block;
+
+    margin-top: 45px;
+}
+
+.main-nav li {
+    display: inline;
+    margin-right: 5%;
+}
+
+.main-nav ul a {
+    font: 18px;
+    font-weight: 800;
+    color: #FFF;
+    list-style: none;
+}
+
+.main-nav ul a:hover {
+    text-decoration: none;
+    color: #47a2da;
+}
+
+/* LOGIN */
+
+.login-status {
+    margin-top: 25px;
+    font-weight: 500;
+    color: #00aaff;
+    text-align: right;
+}
+
+.login-status a {
+    color: #00aaff;
+}
+
+.login-status a:hover {
+    text-decoration: none;
+    color: #47a2da;
+}
+
+#breadcrumb{
+	display: inline-block;
+	margin-bottom: 50px;
+	margin-top: 35px;
+}
+
+/* MAIN */
+
+#student-pic{
+	border-radius: 50%;
+	margin-bottom: 15px;
+}
+
+#pic-action{
+	margin-bottom: 65px;
+	margin-left: -40px;
+}
+
+#form-wrapper{
+	margin-bottom: 70px;
+}
+
+.form-row{
+	margin-bottom: 40px;
+}
+
+.form-label{
+	font-size: 18px;
+}
+
+.text-box{
+	border: 1px solid #47a2da;
+	font-size: 18px;
+}
+
+#form-action{
+	margin-left: 30%;
+}
+/* FOOTER */
+
+footer {
+    border-top: 1px solid #47a2da;
+    margin: 0 12%;
+    padding: 10px 0;
+    font: 400 12px "Raleway", sans-serif;
+}

@@ -36,7 +36,7 @@ $website_link = $editstudent['website_link'];
 $Bio = $editstudent['bio'];
 $social_media = $editstudent['social_media'];
 // Image
-$fp=addslashes(file_get_contents($_FILES['uploadedimage']['tmp_name'])); //will store the image to fp
+//$fp=addslashes(file_get_contents($_FILES['uploadedimage']['tmp_name'])); //will store the image to fp
 ?>
 <table class="table">
   <tr>

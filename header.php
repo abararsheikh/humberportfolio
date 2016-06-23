@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <title>Humber Portfolio</title>
     <meta charset="utf-8">
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
@@ -14,7 +14,10 @@
 
 
     <!--link to css-->
-    <link rel="stylesheet" type="text/css" href="contact.css" />
+    <link rel="stylesheet" type="text/css" href="design/css/contact.css" />
+    <link rel="stylesheet" href="frontend/css/gstyle.css" />
+    <link rel="stylesheet" type="text/css" href="design/css/style_project_profile.css">
+    <link rel="stylesheet" type="text/css" href="design/css/project_profile_header.css">
 
     <!--link to jquery-->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js"></script>
@@ -30,12 +33,9 @@
 
     <!--link to Google Font-->
     <link href='https://fonts.googleapis.com/css?family=Raleway:400,700,800,900|Lato:400,300,700,900' rel='stylesheet' type='text/css'>
-
-
-    <link rel="stylesheet" type="text/css" href="css/style_project_profile.css">
-    <link rel="stylesheet" type="text/css" href="css/project_profile_header.css">
+  
 </head>
-
+  
 <header>
     <div class="container">
         <div class="row">
@@ -82,82 +82,10 @@
 
             <div class="login-status col-sm-2 col-xs-12">
                 <div><span>First Name</span></div>
-                <a href="">Log Out</a>
+                <a href="index.php">Log Out</a>
             </div>
 
         </div>
     </div>
 </header>
 <br />
-
-<body>
-<div class="container">
-
-
-    <div class="row">
-    <div class="col-md-8" id="h1"><h1>PROJECT PROFILE</h1></div>
-    <div class="col-md-4">
-        <button type="button" class="btn btn-default"><img src="images/icons/edit_icon_white.png" /> EDIT PROJECT</button>
-    </div>
-    </div>
-
-    <br />
-
-    <div class="row">
-    <div class="col-md-8" id="h2"><h2>PROJECT NAME</h2></div>
-    <div class="col-md-4">
-        <button type="button" class="btn btn-default"> <img src="images/icons/delete_icon_white.png" /> DELETE PROJECT</button>
-    </div>
-    </div>
-
-    <hr/>
-
-    <div class="row">
-        <div class="col-md-3" id="text1">By Student Name</div>
-        <div class="col-md-6" id="text2">On June 11 2016</div>
-    </div>
-
-    <hr/>
-
-    <div class="well" id="yellow-container">
-        <p>Iterate integrate parallax sticky note hacker viral user centered design personas engaging pair programming
-            paradigm ideate. Ideate innovate affordances waterfall is so 2000 and late long shadow pivot bootstrapping
-            experiential fund 360 campaign fund thinker-maker-doer. Actionable insight co-working minimum viable product
-            prototype sticky note user story disrupt prototype driven. Long shadow ship it actionable insight driven
-            user centered design waterfall is so 2000 and late grok physical computing user centered design affordances
-            ideate driven disrupt.
-        </p>
-    </div>
-
-    <div class="well" id="tools">
-        <p><b>Tools:</b> Photoshop, Illustrator, InDesign</p>
-    </div>
-
-    <div class="well" id="keywords">
-        <p><b>Keywords:</b> Mockup, Website, Design</p>
-    </div>
-
-    <div class="well" id="image-1">
-        <center>
-            <img src="image-1.jpg" class="img-responsive" alt="image one"/>
-        </center>
-    </div>
-
-    <div class="well" id="image-2">
-        <center>
-        <img src="image-1.jpg" class="img-responsive" alt="image two"/>
-        </center>
-    </div>
-
-    <div class="well" id="image-3">
-        <center>
-        <img src="image-1.jpg" class="img-responsive" alt="image three"/>
-        </center>
-    </div>
-
-</div>
-<footer>
-    <p>&copy;2016 School of Media Studies and IT</p>
-</footer>
-</body>
-</html>

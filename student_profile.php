@@ -30,22 +30,24 @@
     }
 */
   //connect to the Image table to dipslay the projects image
-  //  $query="SELECT projects.id,projects.name,projects.keywords,students.id FROM students INNER JOIN projects
-  // ON students.id = projects.students_id";
-    $query="SELECT * FROM projects WHERE students_id = $st_id";
+  
+    $query="select projects.id,projects.name,projects.keywords,images.image from projects
+    LEFT JOIN images ON projects.id = images.projects_id INNER JOIN students ON 
+    students.id = projects.students_id where students.id =$student_id";
     $statement= $db->prepare($query);
     $statement->execute();     
     $projectinfo = $statement->fetchAll();      
     $statement->closeCursor();  
    
   //display Images based on project_ID
+/*
      $query="SELECT * FROM images INNER JOIN projects ON images.projects_id =projects.id 
      INNER JOIN students ON students.id= projects.students_id ";
     $statement= $db->prepare($query);
     $statement->execute();     
     $imageinfo = $statement->fetchAll();      
     $statement->closeCursor();
-
+*/
 ?>
 <b>Welcome : <i><?php echo  $_SESSION['student_firstname'] ; ?></i></b>
   
@@ -96,17 +98,12 @@
       <tr>               
         <td><a href="project_profile.php?project_id=<?php echo $projects['id'];?>"><?php echo $projects['name']; ?></a></td>
         <td><?php echo $projects['keywords']; ?></td>
-        <td></td>
+        <td><img src = "data:image/jpeg;base64,<?php echo base64_encode($projects['image']);?>" style="width:200px;height:200px;"/></td>
       </tr>
     </tbody>    
    <?php endforeach; ?>
 </div>
   
-   <?php foreach($imageinfo as $images) : ?>
-  <div>
-    <img src = "data:image/jpeg;base64,<?php echo base64_encode($images['image']);?>" style="width:200px;height:200px;"/>
-  </div>
-  <?php endforeach; ?>
 <!--structure is based on student pages version 2 pdf from the design team-->
 <!--<button type="button">Logout</button>-->
 <p>

@@ -1,7 +1,6 @@
 <?php
 
 include( 'bootstrap.php' );
-include "login.php";
 
 /*
 $query = 'SELECT *
@@ -30,34 +29,11 @@ while( $record = mysql_fetch_assoc( $result ) )
     <h1>
       Welcome to Portfolio Tool
     </h1>
-    <form method="post" action="">   
-
-        <div>
-            <label for="email">Email:</label>
-            <input type="text" name="email" placeholder="Email Address" maxlength="100">
-        </div>
-        <div class="form-row">
-            <label for="password">Password:</label>
-            <input type="password" name="password" placeholder="Password" maxlength="100">
-        </div>      
-        <div class="login-button">
-            <input type="submit" name="submit" value="Login" title="Login now">
-        </div>
+  
+    <p>
+      Click here to Login    <a href="login_form.php"> <button> Login </button></a>
       
-      <p style="color:red">
-          <?php
-            if(isset($error))
-            {              
-                echo $error;
-            }
-       ?>
-      </p>
-       
-
-    </form>
-    
-    <a href="forgot_password.php">Forgot password?</a>
-    
+    </a>  
     <p>
       <?php echo random_string(); ?>
     </p>

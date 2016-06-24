@@ -24,8 +24,8 @@
          $project_id_img = $projects['id'];
       }
       //Display Projects Image 
-     $query = "SELECT images.image 
-              FROM projects INNER JOIN images ON projects.id = images.projects_id ";
+     $query = "SELECT * FROM images 
+              WHERE projects_id = $project_id ";
 
       $statement= $db->prepare($query);
       $statement->execute();     

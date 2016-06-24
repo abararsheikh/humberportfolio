@@ -23,8 +23,12 @@ if ( $_POST['password'] === $_POST['password_confirm'] )
   setCookie("jcPassSucc", "<span class='jc-pass-succ'>Password reset successful!</span>", time() + 5);
 =======
   ja_change_password( $id, $password);
+<<<<<<< HEAD
   setCookie("jcPassSucc", "<span class='jc-cp-pass-succ-msg'>Your password has been updated</span><a href='project_profile.php' class='jc-cp-pass-succ-link'>Click here to go back to your profile</a>", time() + 5);
 >>>>>>> d7308c6fe9d2777a07850ea90a134890d6ae2c9b:change_password_handler.php
+=======
+  setCookie("jcPassSucc", "<span class='jc-cp-pass-succ-msg'>Your password has been updated</span><a href='student_profile.php' class='jc-cp-pass-succ-link'>Click here to go back to your profile</a>", time() + 5);
+>>>>>>> 66982f842d9ff2cbad01b6289049b676f1e20fe2
   header('Location: change_password.php');
 }
 else

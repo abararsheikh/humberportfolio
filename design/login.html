@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<header>
+ <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+ <link rel="stylesheet" href="css/gstyle.css" />
+ <link href='https://fonts.googleapis.com/css?family=Raleway|Lato' rel='stylesheet' type='text/css'>
+<title>Login</title>
+<header>
+<body>
+
+<!--dont get rid of container-fluid it's required for bootstrap to work-->
+<div class="container-fluid">
+<!--Colored container for the form-->
+	<div class="col-md-6 col-md-offset-3">
+	<div id="beigecolor">
+<!--Login form -->
+		<form action="change_password_handler.php" method="POST" id="change_pass_form">
+		  
+		  <h2>LOGIN</h2><br/>
+				  
+		  	  <!-- Email -->
+		  <div class="jc-cp-field-wrapper"> 
+			<label for="email">Email:</label> <br/>
+			<span class="asterisk"></span>
+			<input name="email" class="form-control" id="email" />
+		  </div><!-- /Email --><br/>
+		  
+		  <!-- Password -->
+		  <div class="jc-cp-field-wrapper">  
+			<label for="password">Password:</label><br/>
+			<span class="asterisk"></span>
+			<input type="password" class="form-control" name="password" id="password" />
+		  </div><!-- /Password --><br/>
+		  
+		  <!-- error message -->
+			<div class="jc-cp-pass-err-wrap jc-login-err-message">
+			  <?php if(isset($_COOKIE['emptyErr'])) { echo $_COOKIE["emptyErr"]; } ?>
+			  <?php if(isset($_COOKIE['matchErr'])) { echo $_COOKIE["matchErr"]; } ?>
+			</div><!-- /error message -->
+		  
+		  <input type="submit" value="Login" name="btn-submit" id="pass-submit" />
+		  
+		  
+		</form>
+		</div>
+	</div>
+</div>
+
+
+</body>
+</html>

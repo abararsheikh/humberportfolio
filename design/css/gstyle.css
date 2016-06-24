@@ -1,0 +1,77 @@
+html,body{
+    padding: 0;
+    margin: 0;
+    height:100%;
+}
+#beigecolor{
+	padding-bottom: 10%;
+	padding-top: 2%;
+	margin-top: 5%;	
+	margin-bottom: 5%;	
+}
+.jc-cp-pass-err-wrap{
+	font-size: 1.05em;
+	font-family: 'Lato', sans-serif;
+}
+.jc-cp-pass-succ-wrapper{
+	font-size: 1.05em;
+	font-family: 'Lato', sans-serif;
+}
+.jc-cp-pass-succ-msg .jc-signup-err-message .jc-login-err-message{
+	display: block;
+	margin-top: 1em;
+	margin-bottom: 1em;
+}
+.jc-forgot-err, .jc-pass-err{
+	display: block;
+	margin-bottom: 1em;
+}
+#profilelink{
+	color: #47a2da;
+	font-size: 1.08em;
+	font-weight: bold;
+	font-family: 'Lato', sans-serif;
+}
+form, label{
+	font-family: 'Lato', sans-serif;
+	font-size: 1.05em;
+}
+input{
+	border: 1px solid #808285;
+	border-radius: 5px;
+}
+h2{
+	color: #000;
+	font-family: 'Lato', sans-serif;
+	text-align: center;
+	font-weight: bold;
+}
+p{
+	font-family: 'Lato', sans-serif;	
+	font-size: 1.05em;
+}
+#pass-submit{
+    background-color: #47a2da; 
+    border: none;
+    color: #fff;
+    padding: 10px 10px;
+    text-align: center;
+	font-family: 'Lato', sans-serif;
+	font-weight: bold;
+    display: inline-block;
+	border-radius: 5px;
+	font-size: 1.05em;
+}
+#submit-submit{
+    background-color: #47a2da; 
+    border: none;
+    color: #fff;
+    padding: 10px 10px;
+    text-align: center;
+	font-family: 'Lato', sans-serif;
+	font-weight: bold;
+    display: inline-block;
+	border-radius: 5px;
+	margin-bottom: 3%;
+	font-size: 1.05em;
+}

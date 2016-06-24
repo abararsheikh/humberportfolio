@@ -1,3 +1,6 @@
+<?php
+//include( 'bootstrap.php' );
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -12,13 +15,12 @@
     <script src="https://use.fontawesome.com/6d807a5fa6.js"></script>
     <script src="http://code.jquery.com/jquery-latest.min.js"></script>
 
-
     <!--link to css-->
     <link rel="stylesheet" type="text/css" href="design/css/contact.css" />
     <link rel="stylesheet" href="frontend/css/gstyle.css" />
     <link rel="stylesheet" type="text/css" href="design/css/style_project_profile.css">
     <link rel="stylesheet" type="text/css" href="design/css/project_profile_header.css">
-
+    <link rel="stylesheet" type="text/css" href="design/css/student_profile.css">
     <!--link to jquery-->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js"></script>
 

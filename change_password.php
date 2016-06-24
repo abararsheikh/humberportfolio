@@ -1,4 +1,7 @@
-<?php include('header.php'); ?>
+<?php 
+include('bootstrap.php');
+
+?>
 	
 <body>
 

@@ -116,7 +116,7 @@
                 <?php endforeach; ?>  						
 						<div id="student-button-wrapper">
 							<a href="" class="btn btn-default" id="edit-profile-button"><img src="design/images/icons/edit_icon_white.png" alt="" class="project-edit-icon">EDIT</a>
-							<a href="" class="btn btn-default" id="change-pass-button">CHANGE PASSWORD</a>
+							<a href="change_password.php" class="btn btn-default" id="change-pass-button">CHANGE PASSWORD</a>
 						</div>
 					</div>
 

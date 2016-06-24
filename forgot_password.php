@@ -131,7 +131,7 @@
   
   <!--link back to the profile page-->
 		  <div id="profilelink">
-		  <p><a href="index.php">Click here to go back to the login page.</a></p><br/>
+		  <p><a href="login_form.php">Click here to go back to the login page.</a></p><br/>
 		  </div>
  
 </form>

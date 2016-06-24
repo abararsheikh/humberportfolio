@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -86,6 +87,7 @@
                 <li class="active">
                     <a href="/admin/index.php"><i class="fa fa-fw fa-dashboard"></i> Administrators</a>
                 </li>
+                <!--
                 <li>
                     <a href="charts.html"><i class="fa fa-fw fa-bar-chart-o"></i> Charts</a>
                 </li>
@@ -118,10 +120,12 @@
                 <li>
                     <a href="index-rtl.html"><i class="fa fa-fw fa-dashboard"></i> RTL Dashboard</a>
                 </li>
+                 -->
             </ul>
         </div>
         <!-- /.navbar-collapse -->
     </nav>
     <div id="page-wrapper">
+
 
         <div class="container-fluid">

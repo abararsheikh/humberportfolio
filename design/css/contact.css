@@ -1,0 +1,186 @@
+@import url("//maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css");
+*,
+*:before,
+*:after {
+    box-sizing: inherit;
+    font-size: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "lato", sans-serif;
+    color: #414142;
+}
+
+body a:hover {
+    text-decoration: none;
+}
+
+.hidden {
+    position: absolute;
+    left: -10000px;
+}
+
+
+/* HEADER */
+
+header {
+    margin: 0 auto;
+    padding-bottom: 10px;
+    font-family: "Raleway", sans-serif;
+    background-color: #414142;
+}
+
+header h1 {
+    font-size: 50px;
+    font-weight: 900;
+    color: #47a2da;
+}
+
+#portfolio {
+    color: #FFF;
+}
+
+.search {
+    position: relative;
+    min-width: 200px;
+    margin-top: 20px;
+    border: none;
+}
+
+
+
+.search .fa-search {
+     background-color: none;
+   color: #414142;
+    position: relative;
+    right: 30px;
+    box-shadow: none;
+  left: 0;
+
+}
+
+.search .fa-search:hover {
+
+   color: #47a2da;
+    position: relative;
+    right: 30px;
+    box-shadow: none;
+
+}
+
+
+/* NAV */
+
+.navlist {
+    display: block;
+
+    margin-top: 45px;
+}
+
+.main-nav li {
+    display: inline;
+    margin-right: 5%;
+}
+
+.main-nav ul a {
+    font: 18px;
+    font-weight: 800;
+    color: #FFF;
+    list-style: none;
+}
+
+.main-nav ul a:hover {
+    text-decoration: none;
+    color: #47a2da;
+}
+
+
+/* LOGIN */
+
+.login-status {
+    margin-top: 25px;
+    font-weight: 500;
+    color: #00aaff;
+    text-align: right;
+}
+
+.login-status a {
+    color: #00aaff;
+}
+
+.login-status a:hover {
+    text-decoration: none;
+    color: #47a2da;
+}
+
+
+/* MAIN */
+
+main {
+    margin-bottom: 150px;
+}
+.current-nav {
+    font: 300 13px "lato", sans-serif;
+    color: #414142;
+    margin-top: 20px;
+}
+
+main h2 {
+    font: 900 40px "lato", sans-serif;
+    margin: 150px 0 100px 0;
+    text-align: center;
+    color: #414142;
+}
+
+#contact-form {
+    padding: 0 15%;
+}
+
+form label {
+    text-align: right;
+}
+form input, form textarea {
+    max-width: 300px;
+    height: 50px;
+    border-radius: 5px;
+    border: 1px solid #47a2da;
+    padding: 2px;
+    display: block;
+    margin-bottom: 10px;
+}
+
+form textarea {
+    height: 100px;
+}
+
+form #submit{
+    display: block;
+    clear: both;
+    position: relative;
+    left: 33%;
+    width: 100px;
+    background-color: #47a2da;
+    color: #414142;
+    font: 400 20px "lato", sans-serif;
+}
+
+form #submit:hover {
+    background-color: #47a2da;
+    color: #FFF;
+}
+
+
+/* FOOTER */
+
+footer {
+    border-top: 1px solid #47a2da;
+    margin: 0 12%;
+    padding: 10px 0;
+    font: 400 12px "Raleway", sans-serif;
+}

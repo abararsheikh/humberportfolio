@@ -1,0 +1,69 @@
+@import 'https://fonts.googleapis.com/css?family=Lato: 200,400,700|Roboto+Condensed:400,700';
+
+
+
+
+
+.well {
+    font-weight: 400;
+    background-color: white;
+    border-color: white;
+    font-size: 20px;
+}
+
+#yellow-container, .well {
+    background: #ffffff !important;
+    font-weight: 400;
+}
+
+
+div {
+    display: block;
+}
+
+p {
+  font-weight: lighter;
+}
+
+#h1, #h2 {
+    font-family: 'Lato', sans-serif;
+    font-weight: 700;
+    color: #414142;;
+}
+
+#text1, #text2 {
+    font-family: 'Roboto Condensed', sans-serif;
+}
+
+
+#text1 {
+    color: #f26c4b;
+}
+
+#text2 {
+    color: #aaaaa9;
+}
+
+#yellow-container, #tools, #keywords {
+    font-family: 'Lato', sans-serif;
+    font-weight: 400 ;
+}
+
+.btn {
+    background: #414142;
+    color: #FFFFFF;
+    font-weight: 200;
+    font-family: 'lato', sans-serif;
+}
+
+.btn:hover {
+    background:#47a2da;
+    color: #FFFFFF;
+    font-weight: 200;
+    font-family: 'lato', sans-serif;
+}
+
+#form {
+    color: #333;
+}
+

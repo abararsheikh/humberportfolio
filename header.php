@@ -21,6 +21,11 @@
     <link rel="stylesheet" type="text/css" href="design/css/style_project_profile.css">
     <link rel="stylesheet" type="text/css" href="design/css/project_profile_header.css">
     <link rel="stylesheet" type="text/css" href="design/css/student_profile.css">
+  
+    <!-- Bootstrap core CSS -->
+    <link href="css/bootstrap.css" rel="stylesheet">
+  <!-- Custom styles for this template -->
+    <link href="design/css/index.css" rel="stylesheet">
     <!--link to jquery-->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js"></script>
 

@@ -1,7 +1,7 @@
 <?php
 require_once 'bootstrap.php';
 require_once 'Contactus.php';
-
+require 'frontend/Model/PHP_Mailer/PHPMailerAutoload.php';
 if(isset($_POST['submit']))
 {
     $Name = htmlspecialchars($_POST['name']);   
@@ -27,13 +27,13 @@ if(isset($_POST['submit']))
   if(empty($error))
   {
       $success = "Your message has been submitted successfully.";
-      header("Location:contact_thankyou.php");
-        $storeUservalue = new Contactus();
-
+    // Call the GMail file to sent an Email
+      include 'frontend/controller/sentToGmail.php';
     
-      // Call the GMail file to sent an Email
+      header("Location:contact_thankyou.php");
+           
+      
 
-      include 'functions/php_mailer.php';
     
   }
  

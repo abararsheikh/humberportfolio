@@ -1,49 +1,14 @@
 <?php
 
 class Contactus
-{
-       
-    public function displayContacts()
-    {
-         //connect to database :
-        include( 'bootstrap.php' );
-        $db = Database::getDB();
-        //once connected execute below query.
-
-        $sql = "SELECT * FROM contactus ORDER BY first_name ASC";
-        $statement1 = $db->prepare($sql);
-        $statement1->execute();
-        $selectResults= $statement1->fetchAll();
-        $statement1->closeCursor();
-        return $selectResults;
-    }
-
-    // USer Interface -USer submit the form and handle it by Email
-
-    public function contactProcess()
-    {
-        //connect to database :
-        include( 'bootstrap.php' );
-        $db = Database::getDB();
-        $first_name = htmlspecialchars($_POST['first_name']);
-        $last_name = htmlspecialchars($_POST['last_name']);
-        $Email = htmlspecialchars($_POST['Email']);
-        $Message = htmlspecialchars($_POST['Message']);
-
-    // Now inserting form values to the database table
-
-        $query ="INSERT INTO contactus(first_name,last_name,Email,Message) VALUES ('$first_name','$last_name','$Email','$Message')";
-        $contactQuery= $db->prepare($query);
-        $contactQuery->execute();
-        $contactQuery->closeCursor();
-
-    }
+{      
+    
 
     /**
      * =============== Validate Form ============
      */
     /**
-     * Validate Firstname
+     * Validate Name
      */
    public function validName($Fname)
     {
@@ -64,7 +29,7 @@ class Contactus
 
 
     /**
-     * Validate Lastname
+     * Validate Subject
      */
 
    public function validSubject($Lname)

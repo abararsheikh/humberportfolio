@@ -15,15 +15,21 @@
     <script src="https://use.fontawesome.com/6d807a5fa6.js"></script>
   
     <!--We have already the connection to jQuery-->
-    <!--<script src="http://code.jquery.com/jquery-latest.min.js"></script> -->
+    <!--<script src="http://code.jquery.com/jquery-latest.min.js"></script> --> 
+    
+  
+    <!-- Bootstrap core CSS -->
+    <link href="css/bootstrap.css" rel="stylesheet">
+  <!-- Custom styles for this template -->
+    <link href="design/css/index.css" rel="stylesheet">
 
-    <!--link to css-->
     <!--We should "/" to have access to the files from anywhere-->
     <link rel="stylesheet" type="text/css" href="/design/css/contact.css" />
     <link rel="stylesheet" href="/frontend/css/gstyle.css" />
     <link rel="stylesheet" type="text/css" href="/design/css/style_project_profile.css">
     <link rel="stylesheet" type="text/css" href="/design/css/project_profile_header.css">
     <link rel="stylesheet" type="text/css" href="/design/css/student_profile.css">
+
     <!--link to jquery-->
   
     <!--We have already the connection to jQuery-->
@@ -69,7 +75,7 @@
             <div class="navlist col-sm-10 col-xs-12">
                 <nav class="main-nav">
                     <ul>
-                        <a href="#">
+                        <a href="index.php">
                             <li>HOME</li>
                         </a>
                         <a href="#">
@@ -78,7 +84,7 @@
                         <a href="#">
                             <li>ABOUT</li>
                         </a>
-                        <a href="#">
+                        <a href="contact.php">
                             <li>CONTACT</li>
                         </a>
                     </ul>

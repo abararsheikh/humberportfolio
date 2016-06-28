@@ -51,6 +51,8 @@
 
     <!--link to css-->
     <link rel="stylesheet" type="text/css" href="contact.css" />
+    <link rel="stylesheet" type="text/css" href="design/css/student_profile.css">
+    
 
     <!--link to jquery-->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js"></script>
@@ -68,8 +70,7 @@
     <link href='https://fonts.googleapis.com/css?family=Raleway:400,700,800,900|Lato:400,300,700,900' rel='stylesheet' type='text/css'>
 
   <!--link to Font Awesome-->
-    <script src="https://use.fontawesome.com/35c0f62854.js"></script>
-
+   <!-- <script src="https://use.fontawesome.com/35c0f62854.js"></script>-->
     <link rel="stylesheet" type="text/css" href="design/css/style_project_profile.css">
     <link rel="stylesheet" type="text/css" href="design/css/project_profile_header.css">
 </head>
@@ -102,7 +103,7 @@
             <div class="navlist col-sm-10 col-xs-12">
                 <nav class="main-nav">
                     <ul>
-                        <a href="#">
+                        <a href="index.php">
                             <li>HOME</li>
                         </a>
                         <a href="#">
@@ -111,7 +112,7 @@
                         <a href="#">
                             <li>ABOUT</li>
                         </a>
-                        <a href="#">
+                        <a href="contact.php">
                             <li>CONTACT</li>
                         </a>
                     </ul>

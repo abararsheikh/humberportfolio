@@ -17,31 +17,26 @@ include DIR_BASE . 'admin/public_header.view.php';
 
             <div class="form-group">
                 <label for="firstname">First Name</label>
-                <input type="text" class="form-control" name="firstname" id="firstname"  value="<?php echo $result['first_name'];?>" required />
+                <label><?php echo $result['first_name'];?></label>
             </div>
 
             <div class="form-group">
                 <label for="lastname">Last Name</label>
-                <input type="text" class="form-control" name="lastname" id="lastname" value="<?php echo $result['last_name'];?>" required>
+                <label><?php echo $result['last_name'];?></label>
             </div>
 
             <div class="form-group">
                 <label for="email">Email</label>
-                <input disabled type="email" class="form-control" name="email" id="email" value="<?php echo $result['email'];?>">
-            </div>
-
-            <div class="form-group">
-                <label for="password">Password</label>
-                <input type="password" class="form-control" name="password" id="password" value="" required />
+                <label><?php echo $result['email'];?></label>
             </div>
 
             <div style="visibility: hidden;">
                 <input type="text" name="id" value="<?php echo $result['id']; ?>" />
-                <input type="text" name="is_post" value="1" />
+
             </div>
 
 
-            <button type="submit" class="btn btn-primary">Delete</button>
+            <button type="submit" name="send" class="btn btn-primary">Delete</button>
             <a href="/admin/index.php" ><button type="button" class="btn btn-primary">Cancel</button></a>
 
         </form>
@@ -67,7 +62,23 @@ if(isset($_GET['id']) )
     $result = $stm->fetch(PDO::FETCH_ASSOC);
 }
 
+else if(isset($_POST['send'])){
+    try {
+        $id= $_POST["id"];
 
+        $db = Database::getDB();
+        $query = "DELETE FORM administrators WHERE id = :id ";
+        $stm = $db->prepare($query);
+        $stm->bindValue(':id', $id);
+        $stm->execute();
+    }catch (PDOException $e){
+
+        echo $sql . "<br>" . $e->getMessage();
+    }
+    echo "<script>var r = confirm('Are you sure to delete an Admin user?');
+            if (r == true) { window.location('/admin/index.php');}</script>";
+    exit();
+}
 
 include DIR_BASE . 'admin/public_footer.view.php';
 ?>

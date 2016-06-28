@@ -24,10 +24,10 @@ include DIR_BASE . 'admin/public_header.view.php';
 <?php
  
 if(isset($_POST['Submit'])){
-  var_dump($_POST, $_FILES);
+ 
    $db = Database::getDB();
   $studentId = $_POST['id'];
-  
+ 
   $id=$_POST['id'];
   $alt=$_POST['alt'];
   $updated_at=date("Y-m-d H:i:s");
@@ -53,7 +53,7 @@ if(isset($_POST['Submit'])){
  
 
 ?>
-<form action="edit_student_image.php" method="post" >
+<form action="edit_student_image.php" method="post" enctype="multipart/form-data" >
   <input type="hidden" name="student_id" value="<?php echo $studentId; ?>">
     <label >id: </label>
   <input type="text" name="id" value="<?php echo $editimage['id'];?>"/><br/>

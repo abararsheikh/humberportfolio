@@ -34,13 +34,15 @@ $allcontacts = $statement1->fetchall();
                 <tr>
                     <th>Project name</th>
                     <th>description</th>
-                    <th>links</th>
+                  <th>tools</th>
+                    <th>keywords</th>
 
                 </tr>
                 <?php foreach ($allcontacts as $contact) : ?>
                     <tr>
                         <td><?php echo $contact['name']; ?></td>
                         <td><?php echo $contact['description']; ?></td>
+                      <td><?php echo $contact['tools']; ?></td>
                         <td><?php echo $contact['keywords']; ?></td>
                         <td><form action="delete_project.php" method="post"
                                   id="delete_contact_form">

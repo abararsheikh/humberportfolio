@@ -81,7 +81,7 @@ $db = Database::getDB();
 $update_statement = $db->query('SELECT * FROM db_updates ORDER BY name');
 if (!$update_statement)
 {
-  die('Your db is not up to date.<br/>You do not have a db_updates table.<br/>Please run update1.sql.');
+ // die('Your db is not up to date.<br/>You do not have a db_updates table.<br/>Please run update1.sql.');
 }
 else
 {

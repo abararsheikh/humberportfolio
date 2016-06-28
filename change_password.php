@@ -1,10 +1,8 @@
-<!DOCTYPE html>
-<header>
- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
- <link rel="stylesheet" href="frontend/css/gstyle.css" />
- <link href='https://fonts.googleapis.com/css?family=Raleway|Lato' rel='stylesheet' type='text/css'>
-<title>Change Password</title>
-</header>
+<?php 
+include('bootstrap.php');
+include('header.php'); 
+?>
+	
 <body>
 
 <!--dont get rid of container-fluid it's required for bootstrap to work-->
@@ -49,13 +47,10 @@
   
 </form>
 
-<script src="vendor/components/jquery/jquery.min.js"></script>
-<script src="frontend/scripts/change_password.js"></script>
     </div>
   </div>
 </div>
-  
-</body>
-</html>
+ 
+<?php include('footer.php'); ?>
  
 

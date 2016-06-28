@@ -76,8 +76,53 @@ class Database
     }
 }
 
-//$something = Database::getDB();
-//var_dump($something);
-//$result = $something->query('SELECT * FROM administrators');
-//var_dump($result->fetchAll());
+$db = Database::getDB();
+$update_statement = $db->query('SELECT * FROM db_updates ORDER BY name');
+if (!$update_statement)
+{
+  die('Your db is not up to date.<br/>You do not have a db_updates table.<br/>Please run update1.sql.');
+}
+else
+{
+  // get array of filenames in /sql folder
+  $updates_required = scandir(DIR_BASE . '/sql');
+  array_splice($updates_required, 0, 2);
+  
+  // fetch rows from db_updates table and create array of 
+  $updates_assoc = $update_statement->fetchAll();
+  $updates_run = [];
+  foreach($updates_assoc as $update)
+  {
+    $updates_run[] = $update['name'];
+  }
+  
+  if (count($updates_run) !== count($updates_required)){
+    // base error message to be appended to
+    $error_message = 'Your database is not up to date.';
+    
+    //check that each requirement is paired with an update previously run
+    foreach($updates_required as $update_required)
+    {
+      if (array_search($update_required, $updates_run) === false)
+      {
+        $error_message .= '<br/>Please run ' . $update_required . '.';
+      }
+    }
+    die($error_message);
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 

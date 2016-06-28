@@ -7,23 +7,7 @@ Coded By:Loveleen Anand
 include( '../bootstrap.php' );
 $db = Database::getDB();
 
-//Custom Css
-$admin_custom_css = array(
-  //eg. '/admin/asset/my.css'
 
-);
-
-//Custom js
-$admin_custom_js = array(
-  //eg. '/admin/asset/my.js'
-
-);
-
-include DIR_BASE . 'admin/public_header.view.php';
-
-?>
-<?php
- 
 $firstname = $_POST['first_name'];
 $lastname = $_POST['last_name'];
 $email = $_POST['email'];
@@ -57,7 +41,5 @@ else
     // Display the student list page
     header('location: managestudentadmin.php');
 }
-?>
-<?php
-include DIR_BASE . 'admin/public_footer.view.php';
+
 ?>

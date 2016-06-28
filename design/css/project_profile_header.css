@@ -1,0 +1,109 @@
+@import url("//maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css");
+
+/* HEADER */
+
+header {
+    margin: 0 auto;
+    padding-bottom: 10px;
+    font-family: "Raleway", sans-serif;
+    background-color: #414142;
+}
+
+header h1 {
+    font-size: 50px;
+    font-weight: 900;
+    color: #47a2da;
+}
+
+#portfolio {
+    color: #FFF;
+}
+
+#breadcrumb{
+    color:#414142;
+    font-weight: lighter;
+}
+
+.search {
+    position: relative;
+    min-width: 200px;
+    margin-top: 20px;
+    border: none;
+}
+
+
+
+.search .fa-search {
+    background-color: none;
+    color: #414142;
+    position: relative;
+    right: 30px;
+    box-shadow: none;
+    left: 0;
+
+}
+
+.search .fa-search:hover {
+
+    color: #47a2da;
+    position: relative;
+    right: 30px;
+    box-shadow: none;
+
+}
+
+
+/* NAV */
+
+.navlist {
+    display: block;
+
+    margin-top: 45px;
+}
+
+.main-nav li {
+    display: inline;
+    margin-right: 5%;
+}
+
+.main-nav ul a {
+    font: 18px;
+    font-weight: 800;
+    color: #FFF;
+    list-style: none;
+}
+
+.main-nav ul a:hover {
+    text-decoration: none;
+    color: #47a2da;
+}
+
+
+/* LOGIN */
+
+.login-status {
+    margin-top: 25px;
+    font-weight: 500;
+    color: #00aaff;
+    text-align: right;
+}
+
+.login-status a {
+    color: #00aaff;
+}
+
+.login-status a:hover {
+    text-decoration: none;
+    color: #47a2da;
+}
+
+
+
+/* FOOTER */
+
+footer {
+    border-top: 1px solid #47a2da;
+    margin: 0 12%;
+    padding: 10px 0;
+    font: 400 12px "Raleway", sans-serif;
+}

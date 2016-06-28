@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <title>Humber Portfolio</title>
+    <meta name="description" content="Humber Portfolio 2016" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+
+	<link rel="stylesheet" type="text/css" href="css/edit_student.css">
+
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous">
+	</script>
+</head>
+<body>
+	<header>
+		<div class="container">
+                <div class="row">
+                    <div class="col-sm-9">
+                        <a href="#">
+                            <h1>HUMBER <span id="portfolio">PORTFOLIO</span></h1>
+                        </a>
+                    </div>
+                    <div class="search col-xs-3">
+                        <form action="#" method="get">
+                    
+                            <div class="input-group search">
+	                            <input type="text" class="form-control" placeholder="Search">
+	                            <span class="input-group-btn">
+	        						<button class="btn btn-default fa fa-search" type="button"></button>
+	      						</span>
+                    		</div>
+                        </form>
+                    </div>
+                    <div class="navlist col-sm-10 col-xs-12">
+                        <nav class="main-nav">
+                            <ul>
+                                <a href="#">
+                                    <li>HOME</li>
+                                </a>
+                                <a href="#">
+                                    <li>STUDENTS</li>
+                                </a>
+                                <a href="#">
+                                    <li>ABOUT</li>
+                                </a>
+                                <a href="#">
+                                    <li>CONTACT</li>
+                                </a>
+                            </ul>
+                        </nav>
+                    </div>
+                    <div class="login-status col-sm-2 col-xs-12">
+                        <div><span>First Name</span></div>
+                        <a href="">Log Out</a>
+                    </div>
+                </div>
+            </div>
+	</header>
+
+	<main>
+		<div class="container"> <!--Main wrapper-->
+			<span id="breadcrumb">Students / Profile / Edit Profile</span>
+			<div class="container col-lg-offset-5" id="pic-wrapper">
+				<img src="images/student_pic.jpg" alt="" id="student-pic">
+				<div id="pic-action">
+					<a href="" class="btn btn-default btn-main" id="edit-pic-button"><img src="images/icons/edit_icon_white.png" alt="" class="icon">EDIT</a>
+					<a href="" class="btn btn-default btn-main" id="remove-pic-button">REMOVE</a>
+				</div>
+			</div>
+
+			<div class="container col-lg-offset-1" id="form-wrapper">
+				<form action="" method="post">
+					<div class="row form-row">
+						<label for="firstname" class="col-lg-2 form-label">First Name <span class="red-font">*</span></label>
+						<div class="col-lg-3">
+							<input type="text" class="form-control text-box" name="firstname" value="'my first name'">
+						</div>
+
+						<label for="lastname" class="col-lg-2 form-label">Last Name <span class="red-font">*</span></label>
+						<div class="col-lg-3">
+							<input type="text" class="form-control text-box" name="lastname" value="'my last name'">
+						</div>
+					</div>
+
+					<div class="row form-row">
+						<label for="email" class="col-lg-2 form-label">Email <span class="red-font">*</span></label>
+						<div class="col-lg-3">
+							<input type="text" class="form-control text-box" name="email" value="'my email address'">
+						</div>
+
+						<label for="website" class="col-lg-2 form-label">Website</label>
+						<div class="col-lg-3">
+							<input type="text" class="form-control text-box" name="website" value="'my website url'">
+						</div>
+					</div>
+
+					<div class="row form-row">
+						<label for="twitter" class="col-lg-2 form-label">Twitter</label>
+						<div class="col-lg-3">
+							<input type="text" class="form-control text-box" name="twitter" value="'my twitter account'">
+						</div>
+
+						<label for="linkedin" class="col-lg-2 form-label">Linkedin</label>
+						<div class="col-lg-3">
+							<input type="text" class="form-control text-box" name="linkedin" value="'my linkedin account'">
+						</div>
+					</div>
+
+					<div class="row form-row">
+						<label for="bio" class="col-lg-3 form-label">Bio <span class="red-font">*</span></label>
+						<div class="col-lg-10">
+							<textarea class="form-control text-box" rows="10" name="bio"></textarea>
+						</div>
+					</div>
+
+					<div class="row" id="form-action">
+						<a href="" class="btn btn-default btn-main" id="save-button"><img src="images/icons/save_icon_white.png" alt="" class="icon">SAVE</a>
+						<a href="" class="btn btn-default btn-main" id="cancel-button"><img src="images/icons/delete_icon_white.png" alt="" class="icon">CANCEL</a>
+					</div>
+				</form>
+			</div>
+		</div>
+	</main>
+	<footer class="container">
+	    <p>&copy;2016 School of Media Studies and IT</p>
+	</footer>
+</body>
+</html>

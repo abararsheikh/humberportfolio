@@ -68,10 +68,12 @@
                             </ul>
                         </nav>
                     </div>
+                  <!--
                     <div class="login-status col-sm-2 row text-right">
                         <span class="col-sm-12 col-xs-3">First&nbsp;Name</span>
                         <a class="col-sm-12 col-xs-3" href="">Log Out</a>
                     </div>
+-->
                 </div>
             </div>
         </header>

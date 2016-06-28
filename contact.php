@@ -1,3 +1,50 @@
+<?php
+require_once 'bootstrap.php';
+require_once 'Contactus.php';
+require 'frontend/Model/PHP_Mailer/PHPMailerAutoload.php';
+if(isset($_POST['submit']))
+{
+    $Name = htmlspecialchars($_POST['name']);   
+    $Email = htmlspecialchars($_POST['email']);
+    $Subject = htmlspecialchars($_POST['subject']);
+    $Message =htmlspecialchars($_POST['message']);
+    $Message = trim($Message);
+    var_dump($Name);
+   //===validate the input=========
+
+    $validate = new Contactus();
+    $error = $validate->validName($Name);
+
+    $error .= $validate->validSubject( $Subject);
+    $error .= $validate->validEmail($Email);
+    $error .= $validate->validMessagebox($Message);
+
+
+
+  // ====Validation End here=====
+
+  //After submitting form redirect user to main page
+  if(empty($error))
+  {
+      $success = "Your message has been submitted successfully.";
+    // Call the GMail file to sent an Email
+      include 'frontend/controller/sentToGmail.php';
+    
+      header("Location:contact_thankyou.php");
+           
+      
+
+    
+  }
+ 
+   
+
+}
+
+ 
+
+
+?>
 <!DOCTYPE html>
 <html>
 
@@ -79,8 +126,10 @@
         <main class="container" id="mainform">
             <div class="current-nav">
                 <span>CONTACT</span></div>
-            <h2 class="col-xs-12">CONTACT</h2>
-            <form action="#" method="post" id="contact-form" class="row">
+            
+            <h2 class="col-xs-12">CONTACT</h2> 
+            <h5 class="col-xs-12"><?php if(isset($error)) echo $error; ?></span>
+            <form action="" method="post" id="contact-form" class="row">
                 <label for="name" class="col-xs-4">Name</label>
                 <input type="text" id="name" name="name" placeholder="Name" class="col-xs-8">
                 <label for="email" class="col-xs-4">Email</label>
@@ -90,7 +139,16 @@
                 <label for="message" class="col-xs-4">Message</label>
                 <textarea rows="4" cols="50" id="message" name="message" class="col-xs-8"></textarea>
                 <input type="submit" id="submit" name="submit" value="Submit">
+       
             </form>
+             <?php
+                    if(isset($success))
+                    {
+                        echo "<h3 style='color: green;'>".$success."</h3>";
+
+                    }
+
+                    ?>
         </main>
 
         <footer>

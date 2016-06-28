@@ -1,6 +1,6 @@
+//will only run once the page Document Object Model (DOM) is ready for JavaScript code to execute.
 $(document).ready(function () 
-{
-  
+{  
   //Inline validation
   $('#password').change( function ()
   {

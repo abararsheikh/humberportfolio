@@ -65,7 +65,7 @@ class Contactus
         {
             if(!filter_var($email,FILTER_VALIDATE_EMAIL))
             {
-                $error .= "Invalid email ! <br />";
+                $error .= "<p style = 'color:red'>Invalid email ! </p><br />";
             }
 
         }

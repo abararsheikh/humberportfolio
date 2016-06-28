@@ -9,7 +9,7 @@ if(isset($_POST['submit']))
     $Subject = htmlspecialchars($_POST['subject']);
     $Message =htmlspecialchars($_POST['message']);
     $Message = trim($Message);
-    var_dump($Name);
+   
    //===validate the input=========
 
     $validate = new Contactus();
@@ -26,15 +26,11 @@ if(isset($_POST['submit']))
   //After submitting form redirect user to main page
   if(empty($error))
   {
-      $success = "Your message has been submitted successfully.";
+     
     // Call the GMail file to sent an Email
       include 'frontend/controller/sentToGmail.php';
     
       header("Location:contact_thankyou.php");
-           
-      
-
-    
   }
  
    
@@ -141,14 +137,7 @@ if(isset($_POST['submit']))
                 <input type="submit" id="submit" name="submit" value="Submit">
        
             </form>
-             <?php
-                    if(isset($success))
-                    {
-                        echo "<h3 style='color: green;'>".$success."</h3>";
-
-                    }
-
-                    ?>
+             
         </main>
 
         <footer>

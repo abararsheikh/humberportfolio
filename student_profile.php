@@ -110,7 +110,7 @@
                     <div class="navlist col-sm-10 col-xs-12">
                         <nav class="main-nav">
                             <ul>
-                                <a href="#">
+                                <a href="index.php">
                                     <li>HOME</li>
                                 </a>
                                 <a href="#">
@@ -119,7 +119,7 @@
                                 <a href="#">
                                     <li>ABOUT</li>
                                 </a>
-                                <a href="#">
+                                <a href="contact.php">
                                     <li>CONTACT</li>
                                 </a>
                             </ul>

@@ -123,7 +123,7 @@ include( 'bootstrap.php' );
                         <a href="#">
                             <li>ABOUT</li>
                         </a>
-                        <a href="#">
+                        <a href="contact.php">
                             <li>CONTACT</li>
                         </a>
                     </ul>

@@ -14,7 +14,7 @@ include "login.php";
 
 </header>
 <main id="main">
- <form name="contact_form" action="add_accountdata.php" method="post">
+ <form name="contact_form" action="add_newproject.php" method="post">
        <div>
                <label  for ="pname" style ="color:darkorange;font-size:30px;">Project name</label>
                <input type ="text" id ="pname" name ="project_name" placeholder ="Type your project name" />
@@ -27,7 +27,13 @@ include "login.php";
     </div>
      <br>
 <div>
-    <label  for ="link" style ="color:darkorange;font-size:30px;">Link:</label>
+    <label  for ="link" style ="color:darkorange;font-size:30px;">Tools:</label>
+    <input type ="text" id ="tools" name ="tools" placeholder ="links here..." />
+
+</div>
+     <br>
+<div>
+    <label  for ="link" style ="color:darkorange;font-size:30px;">Keyword:</label>
     <input type ="text" id ="link" name ="link" placeholder ="links here..." />
 
 </div>

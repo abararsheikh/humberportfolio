@@ -1,5 +1,8 @@
 <?php
-
+/*Confirms that the new password and password confirmation matches besfore going ahead to save on the database.
+/@param string $password
+/@param string $confirmation
+*/
 function confirm_password ($password, $confirmation){
   
   // if password does not match the confirm password entry

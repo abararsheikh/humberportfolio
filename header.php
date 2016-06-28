@@ -13,25 +13,33 @@
     <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
     <script src="https://use.fontawesome.com/6d807a5fa6.js"></script>
-    <script src="http://code.jquery.com/jquery-latest.min.js"></script>
+  
+    <!--We have already the connection to jQuery-->
+    <!--<script src="http://code.jquery.com/jquery-latest.min.js"></script> -->
 
     <!--link to css-->
-    <link rel="stylesheet" type="text/css" href="design/css/contact.css" />
-    <link rel="stylesheet" href="frontend/css/gstyle.css" />
-    <link rel="stylesheet" type="text/css" href="design/css/style_project_profile.css">
-    <link rel="stylesheet" type="text/css" href="design/css/project_profile_header.css">
-    <link rel="stylesheet" type="text/css" href="design/css/student_profile.css">
+    <!--We should "/" to have access to the files from anywhere-->
+    <link rel="stylesheet" type="text/css" href="/design/css/contact.css" />
+    <link rel="stylesheet" href="/frontend/css/gstyle.css" />
+    <link rel="stylesheet" type="text/css" href="/design/css/style_project_profile.css">
+    <link rel="stylesheet" type="text/css" href="/design/css/project_profile_header.css">
+    <link rel="stylesheet" type="text/css" href="/design/css/student_profile.css">
     <!--link to jquery-->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js"></script>
+  
+    <!--We have already the connection to jQuery-->
+    <!--<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js"></script>-->
 
     <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous" />
+    <!--We have already the connection to Bootstrap-->
+    <!--<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous" /> -->
 
     <!-- Bootstrap theme -->
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap-theme.min.css" integrity="sha384-fLW2N01lMqjakBkx3l/M9EahuwpSfeNvV63J5ezn3uZzapT0u7EYsXMjQV+0En5r" crossorigin="anonymous" />
+    <!--We have already the connection to Bootstrap-->
+    <!--<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap-theme.min.css" integrity="sha384-fLW2N01lMqjakBkx3l/M9EahuwpSfeNvV63J5ezn3uZzapT0u7EYsXMjQV+0En5r" crossorigin="anonymous" /> -->
 
     <!-- Bootstrap JavaScript -->
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
+    <!--We have already the connection to Bootstrap-->
+    <!-- <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script> -->
 
     <!--link to Google Font-->
     <link href='https://fonts.googleapis.com/css?family=Raleway:400,700,800,900|Lato:400,300,700,900' rel='stylesheet' type='text/css'>

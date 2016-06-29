@@ -87,6 +87,9 @@
                 <li class="active">
                     <a href="/admin/index.php"><i class="fa fa-fw fa-dashboard"></i> Administrators</a>
                 </li>
+                <li class="">
+                    <a href="/admin/classes/index.php"><i class="fa fa-fw fa-dashboard"></i> Classes</a>
+                </li>
                 <!--
                 <li>
                     <a href="charts.html"><i class="fa fa-fw fa-bar-chart-o"></i> Charts</a>

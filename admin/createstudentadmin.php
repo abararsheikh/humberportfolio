@@ -24,8 +24,8 @@ include DIR_BASE . 'admin/public_header.view.php';
 <h1>
   Create New Student - Admin
 </h1>
-<div class="form-createstudent">
-  <form name='createnewstudentadmin' action='student_register.php' method='POST' enctype='multipart/form-data'/>
+<div class="form-createclass">
+  <form name='createnewclassadmin' action='class_register.php' method='POST' enctype='multipart/form-data'/>
   <label for 'first_name'>First Name: </label>
   <input type="text" name="first_name" />
   <br/>

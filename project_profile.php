@@ -145,10 +145,16 @@ Coded By:Abarar Sheikh
 
     <br />
         <div class="row">
-        <div class="col-md-8" id="h2"><h2><?php echo $project_name; ?></h2></div>
-        <div class="col-md-4">
-          <a href ="delete_projectinfo.php?project_id=<?php echo $projects['id'];?>">  <button type="button" class="btn btn-default"> <img src="design/images/icons/delete_icon.png" /> DELETE PROJECT</button></a>
-        </div>
+          <div class="col-md-8" id="h2"><h2><?php echo $project_name; ?></h2></div>
+          <div class="col-md-4">
+            <a href ="delete_projectinfo.php?project_id=<?php echo $projects['id'];?>">  <button type="button" class="btn btn-default"> <img src="design/images/icons/delete_icon.png" /> DELETE PROJECT</button></a>
+          </div>
+          <p>
+            
+          </p>
+          <div class="col-md-4">
+            <a href ="student_profile.php">  <button type="button" class="btn btn-default"> <img src="design/images/icons/delete_icon.png" /> BACK</button></a>
+          </div>
         </div>
    
     <hr/>

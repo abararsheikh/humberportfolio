@@ -1,4 +1,8 @@
 <?php
+/*
+Coded By:Abarar Sheikh
+*/
+
       include('bootstrap.php' );
       //connect to databse  
       $db = Database::getDB();
@@ -47,7 +51,6 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
     <script src="https://use.fontawesome.com/6d807a5fa6.js"></script>
     <script src="http://code.jquery.com/jquery-latest.min.js"></script>
-
 
     <!--link to css-->
     <link rel="stylesheet" type="text/css" href="contact.css" />
@@ -135,8 +138,8 @@
 
     <div class="row">
     <div class="col-md-8" id="h1"><h1>PROJECT PROFILE</h1></div>
-    <div class="col-md-4">
-        <button type="button" class="btn btn-default"><img src="design/images/icons/edit_icon.png" /> EDIT PROJECT</button>
+    <div class="col-md-4">      
+       <a href ="edit_projectinfo.php?project_id=<?php echo $projects['id'];?>"> <button type="button" class="btn btn-default"><img src="design/images/icons/edit_icon.png" /> EDIT PROJECT</button></a>
     </div>
     </div>
 

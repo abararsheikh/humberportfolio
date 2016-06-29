@@ -1,4 +1,8 @@
 <?php
+/*
+Coded By:Abarar Sheikh
+*/
+
     include('bootstrap.php' );
       //connect to databse  
     $db = Database::getDB();
@@ -167,7 +171,7 @@
 				<div class="container">
 					<div id="project-section-title">
 						<h2>Projects
-						<a href="" class="btn btn-default" id="add-project-button"><img src="design/images/icons/edit_icon_white.png" alt="" class="project-edit-icon">ADD</a></h2>
+						<a href="newproject.php" class="btn btn-default" id="add-project-button"><img src="design/images/icons/edit_icon_white.png" alt="" class="project-edit-icon">ADD</a></h2>
 					</div>
         <?php foreach($projectinfo as $projects) : ?>	
 					<div class="container col-lg-4 project">

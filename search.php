@@ -1,5 +1,5 @@
 <?php
-include( '../bootstrap.php' ); //include this to start the session 
+include( 'bootstrap.php' ); //include this to start the session 
 ?>
 
 

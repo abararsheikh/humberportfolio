@@ -6,8 +6,8 @@ require_once 'functions/search_projects.php';
 $search = $_POST['search'];
 //var_dump($search);
 
-// $results = search_projects($search); // Zarna's function
-$results = array("project_name"=>"Web Trends", "project_id"=>"1", "img_id "=>"1");//to comment
+$results = search_projects($search); // Zarna's function
+//$results = array("project_name"=>"Web Trends", "project_id"=>"1", "img_id "=>"1");//to comment
 
 if (!empty($results)){
 foreach ($results as $result) {

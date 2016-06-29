@@ -1,9 +1,10 @@
 <?php
+require_once('bootstrap.php');
 // Get IDs
 $id = $_POST['id'];
 $db = Database::getDB();
 // Delete the product from the database
-require_once('bootstrap.php');
+
 $query = "DELETE FROM projects
           WHERE id = '$id'";
 $db->exec($query);

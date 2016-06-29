@@ -1,4 +1,8 @@
 <?php
+/*
+Coded By:Abarar Sheikh
+*/
+
 include( 'bootstrap.php' ); //include this to start the session 
 session_unset(); //remove all session variables
 session_destroy();   // destroy the session 

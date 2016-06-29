@@ -1,4 +1,8 @@
 <?php
+/*
+Coded By:Abarar Sheikh
+*/
+
       include('bootstrap.php' );
       //connect to databse  
       $db = Database::getDB();
@@ -48,9 +52,10 @@
     <script src="https://use.fontawesome.com/6d807a5fa6.js"></script>
     <script src="http://code.jquery.com/jquery-latest.min.js"></script>
 
-
     <!--link to css-->
     <link rel="stylesheet" type="text/css" href="contact.css" />
+    <link rel="stylesheet" type="text/css" href="design/css/student_profile.css">
+    
 
     <!--link to jquery-->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js"></script>
@@ -68,8 +73,7 @@
     <link href='https://fonts.googleapis.com/css?family=Raleway:400,700,800,900|Lato:400,300,700,900' rel='stylesheet' type='text/css'>
 
   <!--link to Font Awesome-->
-    <script src="https://use.fontawesome.com/35c0f62854.js"></script>
-
+   <!-- <script src="https://use.fontawesome.com/35c0f62854.js"></script>-->
     <link rel="stylesheet" type="text/css" href="design/css/style_project_profile.css">
     <link rel="stylesheet" type="text/css" href="design/css/project_profile_header.css">
 </head>
@@ -102,7 +106,7 @@
             <div class="navlist col-sm-10 col-xs-12">
                 <nav class="main-nav">
                     <ul>
-                        <a href="#">
+                        <a href="index.php">
                             <li>HOME</li>
                         </a>
                         <a href="#">
@@ -111,7 +115,7 @@
                         <a href="#">
                             <li>ABOUT</li>
                         </a>
-                        <a href="#">
+                        <a href="contact.php">
                             <li>CONTACT</li>
                         </a>
                     </ul>
@@ -134,17 +138,23 @@
 
     <div class="row">
     <div class="col-md-8" id="h1"><h1>PROJECT PROFILE</h1></div>
-    <div class="col-md-4">
-        <button type="button" class="btn btn-default"><img src="design/images/icons/edit_icon.png" /> EDIT PROJECT</button>
+    <div class="col-md-4">      
+       <a href ="edit_projectinfo.php?project_id=<?php echo $projects['id'];?>"> <button type="button" class="btn btn-default"><img src="design/images/icons/edit_icon.png" /> EDIT PROJECT</button></a>
     </div>
     </div>
 
     <br />
         <div class="row">
-        <div class="col-md-8" id="h2"><h2><?php echo $project_name; ?></h2></div>
-        <div class="col-md-4">
-            <button type="button" class="btn btn-default"> <img src="design/images/icons/delete_icon.png" /> DELETE PROJECT</button>
-        </div>
+          <div class="col-md-8" id="h2"><h2><?php echo $project_name; ?></h2></div>
+          <div class="col-md-4">
+            <a href ="delete_projectinfo.php?project_id=<?php echo $projects['id'];?>">  <button type="button" class="btn btn-default"> <img src="design/images/icons/delete_icon.png" /> DELETE PROJECT</button></a>
+          </div>
+          <p>
+            
+          </p>
+          <div class="col-md-4">
+            <a href ="student_profile.php">  <button type="button" class="btn btn-default"> <img src="design/images/icons/delete_icon.png" /> BACK</button></a>
+          </div>
         </div>
    
     <hr/>

@@ -87,13 +87,15 @@
                 <li class="active">
                     <a href="/admin/index.php"><i class="fa fa-fw fa-dashboard"></i> Administrators</a>
                 </li>
-                <!--
+               
                 <li>
-                    <a href="charts.html"><i class="fa fa-fw fa-bar-chart-o"></i> Charts</a>
+                    <a href="/admin/managestudentadmin.php"><i class="fa fa-users"></i> Manage Students</a>
                 </li>
+               
                 <li>
-                    <a href="tables.html"><i class="fa fa-fw fa-table"></i> Tables</a>
+                    <a href="/admin/projectViews/projectsList.php"><i class="fa fa-fw fa-table"></i> Manage Projects</a>
                 </li>
+              <!--
                 <li>
                     <a href="forms.html"><i class="fa fa-fw fa-edit"></i> Forms</a>
                 </li>

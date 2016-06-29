@@ -79,7 +79,47 @@ $social_media = $editstudent['social_media'];
     </td>
   </tr>
 </table>
+<h2>
+  Project Details for <?php echo $firstname; ?>
+</h2>
+    <?php
+ $studentId = $_POST['student_id'];
+$sql_Projects = "SELECT * FROM projects where students_id='$studentId'";
+ $statement = $db->prepare($sql_Projects);
+$statement->execute();
+$resultProjects = $statement->fetchAll();
+$statement->closeCursor();
+?>
+
+<table class="table">
+  <thead>
+  <tr>
+      <td>Project Name</td>
+  <td>Created on</td>
+  <td>Last Updated</td>
+  <td>Project Description</td>
+  <td>Tools Used</td>
+    </tr>
+  </thead>
+  
+    <?php foreach($resultProjects as $res):?>
+   <tr>
+    <td><?php echo $res['name'];?></td>
+         <td><?php echo $res['created_at']; ?></td>
+    <td><?php echo $res['updated_at']; ?></td>
+    <td>    <?php echo $res['description']; ?>    </td>
+       <td>    <?php echo $res['tools']; ?>    </td>
+  </tr>
+  <?php endforeach; ?> 
+ 
+</table>
   <a href="managestudentadmin.php" role="button" class="btn btn-primary">Go Back</a>
+  <form method="post" action="projectViews/addProjectForm.php" style="display:inline-block;">
+  <input type="hidden" name="studentid" value="<?php echo $studentId; ?>"/>
+    <input type="hidden" name="firstname" value="<?php echo $firstname;?>"/>
+        <input type="hidden" name="lastname" value="<?php echo $lastname;?>"/>
+    <input type="submit" name="addProject" value="Add New Project" class="btn btn-primary"/>
+  </form>
 <?php
 include DIR_BASE . 'admin/public_footer.view.php';
 ?>

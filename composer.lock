@@ -4,8 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "a19b43050c09e6a4762fe4598b9ae47b",
-    "content-hash": "1aa79ef16174afaab90bb92ea4767db7",
+    "hash": "2625007eea93762a3f9e2c83be2b7a00",
     "packages": [
         {
             "name": "components/jquery",
@@ -207,6 +206,53 @@
                 "web"
             ],
             "time": "2015-11-24 19:37:05"
+        },
+        {
+            "name": "wideimage/wideimage",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/davidmpaz/WideImageBundle.git",
+                "reference": "474e7ba11646410320b1156685cef632a3c74c22"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/davidmpaz/WideImageBundle/zipball/474e7ba11646410320b1156685cef632a3c74c22",
+                "reference": "474e7ba11646410320b1156685cef632a3c74c22",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.2.4"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-0": {
+                    "WideImage_": "lib/"
+                }
+            },
+            "license": [
+                "GPL"
+            ],
+            "authors": [
+                {
+                    "name": "Gasper Kozak"
+                },
+                {
+                    "name": "David M. Paz",
+                    "email": "davidmpaz@gmail.com"
+                }
+            ],
+            "description": "WideImage image manipulation library",
+            "homepage": "http://wideimage.sourceforge.net/",
+            "keywords": [
+                "image",
+                "manipulation"
+            ],
+            "support": {
+                "source": "https://github.com/davidmpaz/WideImageBundle/tree/master",
+                "issues": "https://github.com/davidmpaz/WideImageBundle/issues"
+            },
+            "time": "2013-11-04 18:09:34"
         }
     ],
     "packages-dev": [
@@ -246,7 +292,9 @@
     ],
     "aliases": [],
     "minimum-stability": "stable",
-    "stability-flags": [],
+    "stability-flags": {
+        "wideimage/wideimage": 20
+    },
     "prefer-stable": false,
     "prefer-lowest": false,
     "platform": [],

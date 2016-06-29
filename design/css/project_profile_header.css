@@ -19,6 +19,11 @@ header h1 {
     color: #FFF;
 }
 
+#breadcrumb{
+    color:#414142;
+    font-weight: lighter;
+}
+
 .search {
     position: relative;
     min-width: 200px;
@@ -29,7 +34,7 @@ header h1 {
 
 
 .search .fa-search {
-    background-color: #FFF;
+    background-color: none;
     color: #414142;
     position: relative;
     right: 30px;

@@ -7,7 +7,7 @@
     //get all the projects
     public static function getProjects() {
         $db = Database::getDB();
-        $query = 'SELECT * FROM projects';
+        $query = "SELECT * FROM projects where deleted_at ='0000-00-00 00:00:00' OR deleted_at IS NULL";
         $result = $db->query($query);
         $projects = array();
         foreach ($result as $row) {

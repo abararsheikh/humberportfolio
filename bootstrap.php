@@ -39,6 +39,7 @@ include( 'functions/strings.php' );
 include( 'functions/forgot_password.php' );
 include( 'functions/change_password.php' );
 include( 'functions/php_mailer.php');
+include( 'functions/search_projects.php');
 
 //$connect = mysql_connect( MYSQL_HOST, MYSQL_USERNAME, MYSQL_PASSWORD ) or die( mysql_error() );
 //mysql_select_db( MYSQL_DATABASE, $connect ) or die( mysql_error() );
@@ -80,7 +81,7 @@ $db = Database::getDB();
 $update_statement = $db->query('SELECT * FROM db_updates ORDER BY name');
 if (!$update_statement)
 {
-  die('Your db is not up to date.<br/>You do not have a db_updates table.<br/>Please run update1.sql.');
+ // die('Your db is not up to date.<br/>You do not have a db_updates table.<br/>Please run update1.sql.');
 }
 else
 {

@@ -3,6 +3,7 @@
 
 function valid_email($email) 
 {
+  $emailErr = '';
   if (empty($email)) {
     $emailErr = "Email is required";
   } else {
@@ -11,5 +12,5 @@ function valid_email($email)
       $emailErr = "Invalid email format"; 
     }
   }  
-  returns $emailErr;
+  return $emailErr;
 }

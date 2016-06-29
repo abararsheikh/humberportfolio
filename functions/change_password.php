@@ -1,5 +1,15 @@
 <?php
 
+
+/**
+ * This function is to change password. We should type our email address and new password. 
+ * After that we connect to DB and find email address we typed and update the password.
+ * If everything is OK, we get successful message. It we have an error, we get an error message.
+ * @param string $email_parameter email address
+ * @param string $password_parameter new password
+ * @param string $type_parameter table name (administrators or students)
+ * @return string successful message or error message
+*/
 function change_password($email_parameter, $password_parameter, $type_parameter)
 {
   

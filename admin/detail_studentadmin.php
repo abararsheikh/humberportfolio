@@ -38,6 +38,9 @@ $social_media = $editstudent['social_media'];
 // Image
 //$fp=addslashes(file_get_contents($_FILES['uploadedimage']['tmp_name'])); //will store the image to fp
 ?>
+<h2>
+  Details For <?php echo $firstname; ?>
+</h2>
 <table class="table">
   <tr>
    <td>ID:</td>
@@ -76,7 +79,7 @@ $social_media = $editstudent['social_media'];
     </td>
   </tr>
 </table>
-  <a href="managestudentadmin.php" role="button" class="btn btn-default">Go Back</a>
+  <a href="managestudentadmin.php" role="button" class="btn btn-primary">Go Back</a>
 <?php
 include DIR_BASE . 'admin/public_footer.view.php';
 ?>

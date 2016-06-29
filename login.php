@@ -1,4 +1,8 @@
 <?php
+/*
+Coded By:Abarar Sheikh
+*/
+
 //include('../bootstrap.php' ); //This file is incuded to start the session and for DB connection
 //session_start();//session starts here  
 if(isset($_POST['submit']))

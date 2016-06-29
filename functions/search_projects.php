@@ -1,5 +1,6 @@
 <?php
 
+
 //FUNCTION - receives a query string to search the projects table
 function search_projects($query_words)
 {
@@ -35,4 +36,5 @@ function search_projects($query_words)
     // we return these records to the front end
     // empty result set has to be handled on the front end as well using the count function
     return $retrievedRecords;
+
 }

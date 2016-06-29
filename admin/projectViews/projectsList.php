@@ -35,9 +35,9 @@ include DIR_BASE . 'admin/public_header.view.php';
         <td style="padding: 10px;"><b>Updated_at</b></td>
         <td style="padding: 10px;"><b>Deleted_at</b></td>
         <td style="padding: 10px;"><b>Students_id</b></td>
-        <td style="padding: 10px;"><b>Description</b></td>
+        <!--<td style="padding: 10px;"><b>Description</b></td>
          <td style="padding: 10px;"><b>Tools</b></td>
-        <td style="padding: 10px;"><b>Keywords</b></td>
+        <td style="padding: 10px;"><b>Keywords</b></td>-->
     </tr>
     <?php
 
@@ -96,9 +96,9 @@ include DIR_BASE . 'admin/public_header.view.php';
         echo "<td>".$updated_at."</td>";
         echo "<td>".$project->getDeleted_at()."</td>";
         echo "<td>".$project->getStudentId()."</td>";
-        echo "<td>".$project->getDescription()."</td>";
-        echo "<td>".$project->getTools()."</td>";
-        echo "<td>".$project->getKeywords()."</td>";
+        //echo "<td>".$project->getDescription()."</td>";
+        //echo "<td>".$project->getTools()."</td>";
+        //echo "<td>".$project->getKeywords()."</td>";
         echo "<td style='padding: 5px'>
         <form action='editProjectForm.php' method='post'>
             <input type='hidden' name='projectId' value="."'$id'"."/>
@@ -110,6 +110,13 @@ include DIR_BASE . 'admin/public_header.view.php';
         <form action='deleteProjectForm.php' method='post' >
             <input type='hidden' name='projectId' value="."'$id'"."/>
             <input type='submit' name='delete' value='Delete' class='btn btn-primary'/>
+         </form>
+        </td>";
+      
+       echo "<td style='padding: 5px'>
+        <form action='detailProject.php' method='post' >
+            <input type='hidden' name='projectId' value="."'$id'"."/>
+            <input type='submit' name='details' value='Details' class='btn btn-primary'/>
          </form>
         </td>";
         echo "</tr>";

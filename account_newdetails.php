@@ -14,7 +14,7 @@ include "login.php";
 
 </header>
 <main id="main">
- <form name="contact_form" action="add_newproject.php" method="post">
+ <form name="contact_form" action="add_accountdata.php" method="post">
        <div>
                <label  for ="fname" style ="color:darkorange;font-size:30px;">First name</label>
                <input type ="text" id ="fname" name ="user_fname" placeholder ="Type your first name" />

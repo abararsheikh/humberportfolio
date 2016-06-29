@@ -32,6 +32,8 @@ include DIR_BASE . 'admin/public_header.view.php';
     </div>
 </div>
 
+ 
+  
 <div class="col-lg-10">
 
     <div id="content" class="table-responsive">

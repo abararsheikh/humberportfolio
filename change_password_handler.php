@@ -18,17 +18,10 @@ if ( $_POST['password'] === $_POST['password_confirm'] )
   $err = "";
   $id = $_SESSION['student_id'];
   $password = $_POST['password'];
-<<<<<<< HEAD:frontend/change_password_handler.php
-  change_password( $id, $password);
-  setCookie("jcPassSucc", "<span class='jc-pass-succ'>Password reset successful!</span>", time() + 5);
-=======
+
   ja_change_password( $id, $password);
-<<<<<<< HEAD
-  setCookie("jcPassSucc", "<span class='jc-cp-pass-succ-msg'>Your password has been updated</span><a href='project_profile.php' class='jc-cp-pass-succ-link'>Click here to go back to your profile</a>", time() + 5);
->>>>>>> d7308c6fe9d2777a07850ea90a134890d6ae2c9b:change_password_handler.php
-=======
+
   setCookie("jcPassSucc", "<span class='jc-cp-pass-succ-msg'>Your password has been updated</span><a href='student_profile.php' class='jc-cp-pass-succ-link'>Click here to go back to your profile</a>", time() + 5);
->>>>>>> 66982f842d9ff2cbad01b6289049b676f1e20fe2
   header('Location: change_password.php');
 }
 else
@@ -44,12 +37,10 @@ if ( $_POST['password'] === "" || $_POST['password_confirm'] === "")
   header('Location: change_password.php');
 }
 
-<<<<<<< HEAD
 /**
  * This is a comment from Test Group
 */
-function change_password ($id, $password) 
-=======
+
 /*
 *Once the new password and confirm password matched, uses the student id to to update the student password in the database.
 *@param int $id
@@ -58,12 +49,7 @@ function change_password ($id, $password)
 *@param string $query
 */
 
-<<<<<<< HEAD:frontend/change_password_handler.php
-function jc_change_password ($id, $password)
->>>>>>> 6de74deb9300c7f1e339aa800b9556d8b2842b08
-=======
 function ja_change_password ($id, $password)
->>>>>>> d7308c6fe9d2777a07850ea90a134890d6ae2c9b:change_password_handler.php
 {
   $db = Database::getDB(); 
   $query = "UPDATE students

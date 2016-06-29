@@ -7,7 +7,7 @@
     //get all the projects
     public static function getProjects() {
         $db = Database::getDB();
-        $query = 'SELECT * FROM projects';
+        $query = "SELECT * FROM projects where deleted_at ='0000-00-00 00:00:00' OR deleted_at IS NULL";
         $result = $db->query($query);
         $projects = array();
         foreach ($result as $row) {
@@ -50,7 +50,26 @@
           $project->setKeywords($row['keywords']);
         return $project;
     }
-   
+   //Get all images for a specific project
+    public static function getImages($projectId){
+        $db = Database::getDB();
+        $query = "SELECT * FROM images WHERE projects_id = '$projectId'";
+        $result = $db->query($query);
+                $images = array();
+        foreach ($result as $row) {
+            $image = new Image(
+                $row['image']
+            );
+            $image->setID($row['id']);
+           $image->setCreated_at($row['created_at']);
+           $image->setUpdated_at($row['updated_at']);
+            $image->setDeleted_at($row['deleted_at']);
+           $image->setProjects_id($row['projects_id']);
+           $image->setAlt($row['alt']);
+            $images[] = $image;
+        }
+        return $images;
+    }
 //update a project in database
     public static function editProject($project) {
         $db = Database::getDB();

@@ -25,7 +25,7 @@ include DIR_BASE . 'admin/public_header.view.php';
 
 <?php
 $db = Database::getDB();
-$query = "SELECT * FROM students";
+$query = "SELECT * FROM `students` WHERE deleted_at = '0000-00-00 00:00:00' OR deleted_at IS NULL";
 $statement = $db->prepare($query);
 $statement->execute();
 $result = $statement->fetchAll();
@@ -60,8 +60,54 @@ $statement->closeCursor();
   <td><?php echo $res['last_name'];?></td>
   <td><?php echo $res['email']; ?></td>
   <td><?php echo $res['classes_id']; ?></td>
-  <td><?php echo $res['created_at'];?></td>
-  <td><?php echo $res['updated_at']; ?></td>
+  <td><?php
+       $created_Date = $res['created_at'];
+      $datecreation = new DateTime($created_Date);
+    $today = new DateTime();
+     $interval = date_diff($today, $datecreation);
+    if($interval->days == 0)
+    {
+     echo "created today";   
+    }
+    else  if($interval->days == 1)
+    {
+     echo "created yesterday";   
+    }
+   else
+   {
+    echo "Created ".$interval->format('%a days')." ago";
+     }
+       // echo $res['created_at'];
+    ?></td>
+  <td>
+    <?php 
+      if(($res['updated_at'] == NULL) OR ($res['updated_at']=='0000-00-00 00:00:00'))
+      {
+        echo "Not Updated Yet";
+      }
+    else
+    {
+     $updated_date = $res['updated_at'];
+      $dateupdated = new DateTime($updated_date);
+    $today = new DateTime();
+     $interval = date_diff($today, $dateupdated);
+    if($interval->days == 0)
+    {
+     echo "Updated today";   
+    }
+    else  if($interval->days == 1)
+    {
+     echo "Updated yesterday";   
+    }
+   else
+   {
+    echo "Updated ".$interval->format('%a days')." ago";
+     }
+       // echo $res['created_at'];
+    
+    }
+   // echo $res['updated_at']; 
+    ?></td>
   <td><?php echo $res['deleted_at']; ?></td>
   <td><?php echo $res['website_link']; ?></td>
   <td><?php echo $res['bio']; ?></td>

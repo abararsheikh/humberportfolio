@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <meta charset="utf-8">
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+    <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+    <script src="http://code.jquery.com/jquery-latest.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="/design/css/style_project_profile.css">
+  <!--link to Font Awesome-->
+    <script src="https://use.fontawesome.com/35c0f62854.js"></script>
+</head>
+<body id="upload-form">
+<div class="container">
+    <div class="col-md-8" id="h1"><h1>UPLOAD A PROJECT</h1></div>
+
+    <div class="col-md-8" id="form">
+        <div class="form-group">
+            <label>PROJECT NAME *</label>
+            <input type="text" class="form-control" id="usr1">
+        </div>
+
+
+        <div class="form-group">
+            <label for="comment">PROJECT DESCRIPTION *</label>
+            <textarea class="form-control" rows="5" id="comment"></textarea>
+        </div>
+
+        <div class="form-group">
+            <label>TOOLS *</label>
+            <input type="text" class="form-control" id="usr2">
+        </div>
+
+        <div class="form-group">
+            <label>PROJECT KEYWORDS *</label>
+            <input type="text" class="form-control" id="usr3">
+        </div>
+
+        <div class="form-group">
+        <button type="button" class="btn btn-default"> <img src="images/icons/upload.png" /> UPLOAD THUMBNAIL</button>
+        </div>
+
+        <div class="form-group">
+            <button type="button" class="btn btn-default"><img src="images/icons/upload.png" /> UPLOAD IMAGE</button>
+        </div>
+    </div>
+
+</div>
+
+</div>
+</body>
+</html>
